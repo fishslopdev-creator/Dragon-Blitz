@@ -1,0 +1,39 @@
+{
+  "id": "playtime:pianosaurus",
+  "displayName": "Pianosaurus",
+  "behaviour": "sound_hunter",
+  "description": "Configurable encounter definition (Chapter 4). Original model and textures.",
+  "model": "playtime:geo/monsters/pianosaurus.geo.json",
+  "texture": "playtime:textures/entity/monsters/pianosaurus.png",
+  "animationFile": "playtime:animations/monsters/pianosaurus.animation.json",
+  "animations": {
+    "idle": "animation.pianosaurus.idle",
+    "walk": "animation.pianosaurus.walk",
+    "run": "animation.pianosaurus.run",
+    "sprint": "animation.pianosaurus.sprint",
+    "search": "animation.pianosaurus.search",
+    "attack": "animation.pianosaurus.attack",
+    "stunned": "animation.pianosaurus.stunned",
+    "intro": "animation.pianosaurus.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.pianosaurus.ambient",
+    "alert": "playtime:monster.pianosaurus.alert",
+    "attack": "playtime:monster.pianosaurus.attack",
+    "footstep": "playtime:monster.pianosaurus.step"
+  },
+  "width": 2.2,
+  "height": 3.0,
+  "visionRange": 20,
+  "hearingRange": 24,
+  "walkSpeed": 0.16,
+  "chaseSpeed": 0.32,
+  "attackRange": 3.0,
+  "captureOutcome": "catch",
+  "distractedBy": [
+    "playtime:music"
+  ],
+  "params": {
+    "vision_factor": 0.3
+  }
+}

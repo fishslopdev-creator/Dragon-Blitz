@@ -1,0 +1,35 @@
+{
+  "id": "playtime:sample/foreman",
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Foreman (radio)",
+      "text": "...is someone on the floor? The line's dead. Core's been pulled from the generator.",
+      "options": [
+        {
+          "text": "Where's a spare core?",
+          "next": "core"
+        },
+        {
+          "text": "What's that noise?",
+          "next": "noise"
+        }
+      ]
+    },
+    "core": {
+      "speaker": "Foreman (radio)",
+      "text": "Shelf by the east wall. Slot it in, start the generator, then wake both receivers together.",
+      "actions": [
+        {
+          "type": "objective_set",
+          "id": "playtime:sample/find_core"
+        }
+      ]
+    },
+    "noise": {
+      "speaker": "Foreman (radio)",
+      "text": "The stagehand. It follows sound. Don't give it any.",
+      "next": "core"
+    }
+  }
+}

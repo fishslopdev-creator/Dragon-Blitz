@@ -1,0 +1,55 @@
+{
+  "id": "playtime:green_hand",
+  "displayName": "Green Hand",
+  "description": "Stores an electrical charge from a power source and releases it into receivers and nodes.",
+  "icon": "playtime:textures/gui/hands/green_hand.png",
+  "model": "playtime:geo/hands/green_hand.geo.json",
+  "texture": "playtime:textures/entity/hands/green_hand.png",
+  "animations": {
+    "fire": "animation.hand.fire",
+    "retract": "animation.hand.retract",
+    "equip": "animation.hand.equip",
+    "use": "animation.hand.use",
+    "idle": "animation.hand.idle"
+  },
+  "sounds": {
+    "fire": "playtime:grabpack.fire",
+    "attach": "playtime:grabpack.attach",
+    "retract": "playtime:grabpack.retract",
+    "pickup": "playtime:hand.pickup"
+  },
+  "color": "#FF35B44A",
+  "launcher": "right",
+  "abilities": [
+    "playtime:grab",
+    "playtime:interact",
+    "playtime:conduct",
+    "playtime:store_charge"
+  ],
+  "targets": [
+    "interactive",
+    "button",
+    "scanner",
+    "power_source",
+    "power_receiver"
+  ],
+  "interactions": [
+    "playtime:green_scanner"
+  ],
+  "range": 24.0,
+  "cooldownTicks": 10,
+  "sortOrder": 2,
+  "cable": {
+    "maxLength": 24.0,
+    "fireSpeed": 2.5,
+    "retractSpeed": 3.0,
+    "maxAttachTicks": 600,
+    "snapFactor": 1.15,
+    "obstructionGraceTicks": 10
+  },
+  "params": {
+    "charge_ticks": 200.0,
+    "power_ticks": 1200.0
+  },
+  "grabPacks": []
+}

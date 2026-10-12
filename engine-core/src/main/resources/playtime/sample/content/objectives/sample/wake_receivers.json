@@ -1,0 +1,6 @@
+{
+  "id": "playtime:sample/wake_receivers",
+  "text": "Wake both receivers at the same time",
+  "chapter": "playtime:sample/factory",
+  "order": 3
+}

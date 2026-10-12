@@ -1,0 +1,23 @@
+{
+  "id": "playtime:sample/factory_passage",
+  "displayName": "Factory passage",
+  "type": "puzzle",
+  "relAnchor": [
+    24,
+    1,
+    0
+  ],
+  "width": 3,
+  "height": 3,
+  "facing": "east",
+  "permanentUnlock": true,
+  "access": {
+    "conditions": [
+      {
+        "type": "puzzle_completed",
+        "id": "playtime:sample/assembly_line"
+      }
+    ],
+    "deniedMessage": "The passage is sealed until the assembly line runs."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "playtime:testing_equipment",
+  "displayName": "Testing Equipment",
+  "giveGrabPack": true,
+  "grabPack": "playtime:grabpack_2",
+  "startingHands": [
+    "playtime:blue_hand",
+    "playtime:red_hand",
+    "playtime:green_hand",
+    "playtime:purple_hand",
+    "playtime:flare_hand",
+    "playtime:omni_hand",
+    "playtime:pressure_hand",
+    "playtime:conductive_hand",
+    "playtime:pulse_hand"
+  ],
+  "startingLeftHand": "playtime:blue_hand",
+  "startingRightHand": "playtime:omni_hand",
+  "keys": [
+    "playtime:blue_access_card",
+    "playtime:red_access_card",
+    "playtime:high_security_card"
+  ],
+  "inventory": [
+    {
+      "item": "minecraft:torch",
+      "count": 16
+    }
+  ],
+  "showMainMenu": false,
+  "tutorial": false
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "enabled": true,
+  "gameTitle": "Playtime Factory: Chapter 1",
+  "subtitle": "A Tight Squeeze",
+  "chapterName": "Chapter 1",
+  "startingChapter": "playtime:chapter_1",
+  "defaultProfile": "playtime:new_player",
+  "mainMenu": {
+    "enabled": true,
+    "background": "playtime:textures/gui/menu/factory_background.png",
+    "music": "playtime:menu.factory_hum",
+    "musicVolume": 0.8,
+    "showOn": [
+      "every_login",
+      "survival_switch"
+    ],
+    "buttons": [
+      {
+        "type": "continue",
+        "visible": true,
+        "order": 0
+      },
+      {
+        "type": "new_game",
+        "visible": true,
+        "order": 1
+      },
+      {
+        "type": "chapters",
+        "visible": true,
+        "order": 2
+      },
+      {
+        "type": "settings",
+        "visible": true,
+        "order": 3
+      },
+      {
+        "type": "multiplayer_info",
+        "visible": false,
+        "order": 4
+      }
+    ],
+    "includeAdventureMode": false,
+    "showProgressStatus": true,
+    "animated": true,
+    "accentColor": "#FFE23B3B",
+    "textColor": "#FFEDE6D6",
+    "inputDelayTicks": 10,
+    "multiplayerInfo": ""
+  },
+  "rules": {
+    "keepItemsOnDeath": true,
+    "keepHandsOnDeath": true,
+    "keepUncheckpointedKeysOnDeath": true,
+    "resetPowerOnDeath": false,
+    "resetActivePuzzlesOnDeath": true,
+    "allowSelfPull": false,
+    "maxSelfPullSpeed": 0.9,
+    "wheelMode": "live",
+    "allowConsoleSelfService": false,
+    "allowMenuCommand": true,
+    "tutorialsEnabled": true,
+    "monsterDifficulty": 1.0
+  },
+  "multiplayer": {
+    "progressionMode": "individual",
+    "targetPolicy": "nearest",
+    "resetAuthority": "host_and_operators",
+    "chaseFailsForAll": false,
+    "chaseParticipationRadius": 48.0
+  },
+  "atmosphere": {
+    "ambientLoop": "playtime:ambient.factory",
+    "ambientVolume": 0.5,
+    "chaseMusic": "playtime:music.chase",
+    "particleBudgetPerTick": 64,
+    "fogEnabled": false
+  },
+  "monsterToggles": {
+    "playtime:mini_huggies": false
+  },
+  "saveSlots": 3
+}

@@ -1,0 +1,39 @@
+{
+  "id": "playtime:huggy_wuggy_returning",
+  "displayName": "Huggy Wuggy (returning)",
+  "behaviour": "hunter",
+  "description": "Configurable encounter definition (Chapter 5). Original model and textures.",
+  "model": "playtime:geo/monsters/huggy_wuggy_returning.geo.json",
+  "texture": "playtime:textures/entity/monsters/huggy_wuggy_returning.png",
+  "animationFile": "playtime:animations/monsters/huggy_wuggy_returning.animation.json",
+  "animations": {
+    "idle": "animation.huggy_wuggy_returning.idle",
+    "walk": "animation.huggy_wuggy_returning.walk",
+    "run": "animation.huggy_wuggy_returning.run",
+    "sprint": "animation.huggy_wuggy_returning.sprint",
+    "search": "animation.huggy_wuggy_returning.search",
+    "attack": "animation.huggy_wuggy_returning.attack",
+    "stunned": "animation.huggy_wuggy_returning.stunned",
+    "intro": "animation.huggy_wuggy_returning.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.huggy_wuggy_returning.ambient",
+    "alert": "playtime:monster.huggy_wuggy_returning.alert",
+    "attack": "playtime:monster.huggy_wuggy_returning.attack",
+    "footstep": "playtime:monster.huggy_wuggy_returning.step"
+  },
+  "width": 1.0,
+  "height": 4.2,
+  "visionRange": 30,
+  "hearingRange": 22,
+  "walkSpeed": 0.18,
+  "chaseSpeed": 0.36,
+  "sprintSpeed": 0.48,
+  "memoryTicks": 200,
+  "attackRange": 2.4,
+  "captureOutcome": "catch",
+  "traits": [
+    "opens_doors",
+    "vent_travel"
+  ]
+}

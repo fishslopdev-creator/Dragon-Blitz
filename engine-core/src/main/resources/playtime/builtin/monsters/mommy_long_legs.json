@@ -1,0 +1,37 @@
+{
+  "id": "playtime:mommy_long_legs",
+  "displayName": "Mommy Long Legs",
+  "behaviour": "crawler",
+  "description": "Configurable encounter definition (Chapter 2). Original model and textures.",
+  "model": "playtime:geo/monsters/mommy_long_legs.geo.json",
+  "texture": "playtime:textures/entity/monsters/mommy_long_legs.png",
+  "animationFile": "playtime:animations/monsters/mommy_long_legs.animation.json",
+  "animations": {
+    "idle": "animation.mommy_long_legs.idle",
+    "walk": "animation.mommy_long_legs.walk",
+    "crawl": "animation.mommy_long_legs.crawl",
+    "run": "animation.mommy_long_legs.crawl",
+    "sprint": "animation.mommy_long_legs.lunge",
+    "attack": "animation.mommy_long_legs.grab",
+    "search": "animation.mommy_long_legs.search"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.mommy_long_legs.ambient",
+    "alert": "playtime:monster.mommy_long_legs.alert",
+    "attack": "playtime:monster.mommy_long_legs.attack",
+    "footstep": "playtime:monster.mommy_long_legs.step"
+  },
+  "width": 1.2,
+  "height": 3.2,
+  "visionRange": 30,
+  "walkSpeed": 0.22,
+  "chaseSpeed": 0.38,
+  "sprintSpeed": 0.44,
+  "attackRange": 3.5,
+  "traits": [
+    "climbs_walls",
+    "long_reach",
+    "opens_doors"
+  ],
+  "captureOutcome": "catch"
+}

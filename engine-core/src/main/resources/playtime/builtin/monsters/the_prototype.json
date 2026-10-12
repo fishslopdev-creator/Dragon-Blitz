@@ -1,0 +1,37 @@
+{
+  "id": "playtime:the_prototype",
+  "displayName": "The Prototype",
+  "behaviour": "boss",
+  "description": "Configurable encounter definition (Chapter 5). Original model and textures.",
+  "model": "playtime:geo/monsters/the_prototype.geo.json",
+  "texture": "playtime:textures/entity/monsters/the_prototype.png",
+  "animationFile": "playtime:animations/monsters/the_prototype.animation.json",
+  "animations": {
+    "idle": "animation.the_prototype.idle",
+    "walk": "animation.the_prototype.walk",
+    "run": "animation.the_prototype.run",
+    "sprint": "animation.the_prototype.sprint",
+    "search": "animation.the_prototype.search",
+    "attack": "animation.the_prototype.attack",
+    "stunned": "animation.the_prototype.stunned",
+    "intro": "animation.the_prototype.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.the_prototype.ambient",
+    "alert": "playtime:monster.the_prototype.alert",
+    "attack": "playtime:monster.the_prototype.attack",
+    "footstep": "playtime:monster.the_prototype.step"
+  },
+  "width": 1.0,
+  "height": 3.2,
+  "visionRange": 40,
+  "chaseSpeed": 0.4,
+  "sprintSpeed": 0.5,
+  "attackRange": 3.2,
+  "captureOutcome": "kill",
+  "traits": [
+    "immune_to_stun",
+    "long_reach",
+    "breaks_doors"
+  ]
+}

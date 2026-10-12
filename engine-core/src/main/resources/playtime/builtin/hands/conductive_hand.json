@@ -1,0 +1,56 @@
+{
+  "id": "playtime:conductive_hand",
+  "displayName": "Conductive Hand",
+  "description": "A live power conduit: hold a source and keep the circuit alive while you move between nodes.",
+  "icon": "playtime:textures/gui/hands/conductive_hand.png",
+  "model": "playtime:geo/hands/conductive_hand.geo.json",
+  "texture": "playtime:textures/entity/hands/conductive_hand.png",
+  "animations": {
+    "fire": "animation.hand.fire",
+    "retract": "animation.hand.retract",
+    "equip": "animation.hand.equip",
+    "use": "animation.hand.use",
+    "idle": "animation.hand.idle"
+  },
+  "sounds": {
+    "fire": "playtime:grabpack.fire",
+    "attach": "playtime:grabpack.attach",
+    "retract": "playtime:grabpack.retract",
+    "pickup": "playtime:hand.pickup"
+  },
+  "color": "#FFE3C629",
+  "launcher": "right",
+  "abilities": [
+    "playtime:grab",
+    "playtime:conduct",
+    "playtime:interact"
+  ],
+  "targets": [
+    "power_source",
+    "power_receiver",
+    "button",
+    "scanner"
+  ],
+  "interactions": [
+    "playtime:conductive",
+    "playtime:yellow_scanner"
+  ],
+  "range": 24.0,
+  "cooldownTicks": 10,
+  "sortOrder": 7,
+  "cable": {
+    "maxLength": 24.0,
+    "fireSpeed": 2.5,
+    "retractSpeed": 3.0,
+    "maxAttachTicks": 600,
+    "snapFactor": 1.15,
+    "obstructionGraceTicks": 10
+  },
+  "params": {
+    "power_ticks": 300.0
+  },
+  "grabPacks": [
+    "playtime:grabpack_2",
+    "playtime:salvaged_grabpack"
+  ]
+}

@@ -1,0 +1,17 @@
+pluginManagement {
+    repositories {
+        maven { url = 'https://maven.fabricmc.net/' }
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'playtime-engine'
+
+include 'engine-core'
+
+// The Fabric module needs maven.fabricmc.net and Mojang's servers to resolve
+// Minecraft and Loom. Enable it with -PwithFabric=true (or in gradle.properties)
+// on a machine that can reach those hosts.
+if (providers.gradleProperty('withFabric').getOrElse('false').toBoolean()) {
+    include 'fabric'
+}

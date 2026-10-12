@@ -1,0 +1,10 @@
+allprojects {
+    group = project.maven_group
+    version = project.mod_version
+}
+
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+}

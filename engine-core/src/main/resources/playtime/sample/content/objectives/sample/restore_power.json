@@ -1,0 +1,6 @@
+{
+  "id": "playtime:sample/restore_power",
+  "text": "Restore power to the security door",
+  "chapter": "playtime:sample/factory",
+  "order": 6
+}

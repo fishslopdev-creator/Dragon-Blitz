@@ -1,0 +1,76 @@
+{
+  "id": "playtime:omni_hand",
+  "displayName": "Omni-Hand",
+  "description": "An upgraded Red Hand that holds several charges and opens red scanners and security systems.",
+  "icon": "playtime:textures/gui/hands/omni_hand.png",
+  "model": "playtime:geo/hands/omni_hand.geo.json",
+  "texture": "playtime:textures/entity/hands/omni_hand.png",
+  "animations": {
+    "fire": "animation.hand.fire",
+    "retract": "animation.hand.retract",
+    "equip": "animation.hand.equip",
+    "use": "animation.hand.use",
+    "idle": "animation.hand.idle"
+  },
+  "sounds": {
+    "fire": "playtime:grabpack.fire",
+    "attach": "playtime:grabpack.attach",
+    "retract": "playtime:grabpack.retract",
+    "pickup": "playtime:hand.pickup"
+  },
+  "color": "#FFE8E8F0",
+  "launcher": "right",
+  "abilities": [
+    "playtime:grab",
+    "playtime:pull",
+    "playtime:interact",
+    "playtime:conduct",
+    "playtime:store_charge",
+    "playtime:scanner_access",
+    "playtime:retrieve"
+  ],
+  "targets": [
+    "interactive",
+    "lever",
+    "handle",
+    "button",
+    "scanner",
+    "power_source",
+    "power_receiver",
+    "pullable",
+    "collectible"
+  ],
+  "interactions": [
+    "playtime:red_scanner",
+    "playtime:omni_scanner",
+    "playtime:security"
+  ],
+  "range": 26.0,
+  "cooldownTicks": 8,
+  "sortOrder": 5,
+  "cable": {
+    "maxLength": 26.0,
+    "fireSpeed": 2.5,
+    "retractSpeed": 3.0,
+    "maxAttachTicks": 600,
+    "snapFactor": 1.15,
+    "obstructionGraceTicks": 10
+  },
+  "replaces": "playtime:red_hand",
+  "charges": 4,
+  "rechargeTicks": 120,
+  "params": {
+    "charge_ticks": 400.0,
+    "power_ticks": 1200.0
+  },
+  "grabPacks": [
+    "playtime:grabpack_2",
+    "playtime:salvaged_grabpack"
+  ],
+  "unlock": {
+    "hands": [
+      "playtime:red_hand"
+    ],
+    "lockedMessage": "This upgrade needs a Red Hand to install."
+  }
+}

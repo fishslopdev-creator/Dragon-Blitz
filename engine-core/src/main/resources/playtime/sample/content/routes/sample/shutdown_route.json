@@ -1,0 +1,34 @@
+{
+  "id": "playtime:sample/shutdown_route",
+  "loop": false,
+  "points": [
+    {
+      "rel": [
+        30,
+        1,
+        8
+      ]
+    },
+    {
+      "rel": [
+        34,
+        1,
+        4
+      ]
+    },
+    {
+      "rel": [
+        40,
+        1,
+        0
+      ]
+    },
+    {
+      "rel": [
+        44,
+        1,
+        0
+      ]
+    }
+  ]
+}

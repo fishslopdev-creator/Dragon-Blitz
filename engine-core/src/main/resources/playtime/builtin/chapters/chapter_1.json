@@ -1,0 +1,8 @@
+{
+  "id": "playtime:chapter_1",
+  "name": "Chapter 1",
+  "subtitle": "Opening chapter",
+  "order": 1,
+  "next": "playtime:chapter_2",
+  "hiddenUntilReached": false
+}

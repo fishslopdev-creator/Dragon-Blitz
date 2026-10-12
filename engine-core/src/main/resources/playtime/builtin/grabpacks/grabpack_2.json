@@ -1,0 +1,10 @@
+{
+  "id": "playtime:grabpack_2",
+  "displayName": "GrabPack 2.0",
+  "model": "playtime:geo/grabpack_2.geo.json",
+  "texture": "playtime:textures/entity/grabpack_2.png",
+  "cableLength": 28.0,
+  "handWheel": true,
+  "rightLauncherSlots": 6,
+  "hasLeftLauncher": true
+}

@@ -1,0 +1,209 @@
+{
+ "format_version": "1.12.0",
+ "minecraft:geometry": [
+  {
+   "description": {
+    "identifier": "geometry.hand_omni_hand",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 4,
+    "visible_bounds_height": 5,
+    "visible_bounds_offset": [
+     0,
+     2,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "hand",
+     "pivot": [
+      0,
+      0,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -3,
+        0,
+        -2
+       ],
+       "size": [
+        6,
+        6,
+        4
+       ],
+       "uv": [
+        0,
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "name": "finger_0",
+     "pivot": [
+      -2.25,
+      6,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -3,
+        6,
+        -1
+       ],
+       "size": [
+        1.5,
+        4,
+        2
+       ],
+       "uv": [
+        20,
+        0
+       ]
+      }
+     ],
+     "parent": "hand"
+    },
+    {
+     "name": "finger_1",
+     "pivot": [
+      -0.75,
+      6,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -1.5,
+        6,
+        -1
+       ],
+       "size": [
+        1.5,
+        4,
+        2
+       ],
+       "uv": [
+        28,
+        0
+       ]
+      }
+     ],
+     "parent": "hand"
+    },
+    {
+     "name": "finger_2",
+     "pivot": [
+      0.75,
+      6,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        0,
+        6,
+        -1
+       ],
+       "size": [
+        1.5,
+        4,
+        2
+       ],
+       "uv": [
+        36,
+        0
+       ]
+      }
+     ],
+     "parent": "hand"
+    },
+    {
+     "name": "finger_3",
+     "pivot": [
+      2.25,
+      6,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        1.5,
+        6,
+        -1
+       ],
+       "size": [
+        1.5,
+        4,
+        2
+       ],
+       "uv": [
+        44,
+        0
+       ]
+      }
+     ],
+     "parent": "hand"
+    },
+    {
+     "name": "thumb",
+     "pivot": [
+      3,
+      3,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        3,
+        2,
+        -1
+       ],
+       "size": [
+        2,
+        3,
+        2
+       ],
+       "uv": [
+        52,
+        0
+       ]
+      }
+     ],
+     "parent": "hand"
+    },
+    {
+     "name": "cuff",
+     "pivot": [
+      0,
+      -2,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -2.5,
+        -2,
+        -2
+       ],
+       "size": [
+        5,
+        2,
+        4
+       ],
+       "uv": [
+        0,
+        10
+       ]
+      }
+     ],
+     "parent": "hand"
+    }
+   ]
+  }
+ ]
+}

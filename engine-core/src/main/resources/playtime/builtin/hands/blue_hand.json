@@ -1,0 +1,55 @@
+{
+  "id": "playtime:blue_hand",
+  "displayName": "Blue Hand",
+  "description": "Long-range grabbing and pulling. Can carry power along the cable between a source and a receiver.",
+  "icon": "playtime:textures/gui/hands/blue_hand.png",
+  "model": "playtime:geo/hands/blue_hand.geo.json",
+  "texture": "playtime:textures/entity/hands/blue_hand.png",
+  "animations": {
+    "fire": "animation.hand.fire",
+    "retract": "animation.hand.retract",
+    "equip": "animation.hand.equip",
+    "use": "animation.hand.use",
+    "idle": "animation.hand.idle"
+  },
+  "sounds": {
+    "fire": "playtime:grabpack.fire",
+    "attach": "playtime:grabpack.attach",
+    "retract": "playtime:grabpack.retract",
+    "pickup": "playtime:hand.pickup"
+  },
+  "color": "#FF2F6BDB",
+  "launcher": "left",
+  "abilities": [
+    "playtime:grab",
+    "playtime:pull",
+    "playtime:interact",
+    "playtime:conduct",
+    "playtime:retrieve"
+  ],
+  "targets": [
+    "interactive",
+    "lever",
+    "handle",
+    "button",
+    "scanner",
+    "power_source",
+    "power_receiver",
+    "pullable",
+    "collectible"
+  ],
+  "interactions": [
+    "playtime:blue_scanner"
+  ],
+  "range": 24.0,
+  "cooldownTicks": 8,
+  "sortOrder": 0,
+  "cable": {
+    "maxLength": 24.0,
+    "fireSpeed": 2.5,
+    "retractSpeed": 3.0,
+    "maxAttachTicks": 600,
+    "snapFactor": 1.15,
+    "obstructionGraceTicks": 10
+  }
+}

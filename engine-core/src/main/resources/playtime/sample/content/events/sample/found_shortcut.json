@@ -1,0 +1,16 @@
+{
+  "id": "playtime:sample/found_shortcut",
+  "trigger": {
+    "type": "manual"
+  },
+  "actions": [
+    {
+      "type": "set_flag",
+      "id": "playtime:sample/shortcut"
+    },
+    {
+      "type": "subtitle",
+      "text": "A crawlspace straight to the breaker room."
+    }
+  ]
+}

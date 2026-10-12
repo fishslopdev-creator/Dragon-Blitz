@@ -1,0 +1,38 @@
+{
+  "id": "playtime:boxy_boo",
+  "displayName": "Boxy Boo",
+  "behaviour": "ambusher",
+  "description": "Configurable encounter definition (Chapter 4). Original model and textures.",
+  "model": "playtime:geo/monsters/boxy_boo.geo.json",
+  "texture": "playtime:textures/entity/monsters/boxy_boo.png",
+  "animationFile": "playtime:animations/monsters/boxy_boo.animation.json",
+  "animations": {
+    "hidden": "animation.boxy_boo.hidden",
+    "ambush": "animation.boxy_boo.unfold",
+    "run": "animation.boxy_boo.run",
+    "sprint": "animation.boxy_boo.run",
+    "attack": "animation.boxy_boo.attack",
+    "walk": "animation.boxy_boo.walk",
+    "idle": "animation.boxy_boo.idle"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.boxy_boo.ambient",
+    "alert": "playtime:monster.boxy_boo.alert",
+    "attack": "playtime:monster.boxy_boo.attack",
+    "footstep": "playtime:monster.boxy_boo.step"
+  },
+  "width": 1.0,
+  "height": 2.8,
+  "chaseSpeed": 0.36,
+  "sprintSpeed": 0.42,
+  "attackRange": 2.8,
+  "captureOutcome": "catch",
+  "traits": [
+    "long_reach"
+  ],
+  "params": {
+    "ambush_radius": 4.0,
+    "intro_ticks": 24.0,
+    "chase_duration": 240.0
+  }
+}

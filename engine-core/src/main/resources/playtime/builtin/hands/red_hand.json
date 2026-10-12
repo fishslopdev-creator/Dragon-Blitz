@@ -1,0 +1,55 @@
+{
+  "id": "playtime:red_hand",
+  "displayName": "Red Hand",
+  "description": "General-purpose grabbing and interaction. Works red hand scanners and carries power.",
+  "icon": "playtime:textures/gui/hands/red_hand.png",
+  "model": "playtime:geo/hands/red_hand.geo.json",
+  "texture": "playtime:textures/entity/hands/red_hand.png",
+  "animations": {
+    "fire": "animation.hand.fire",
+    "retract": "animation.hand.retract",
+    "equip": "animation.hand.equip",
+    "use": "animation.hand.use",
+    "idle": "animation.hand.idle"
+  },
+  "sounds": {
+    "fire": "playtime:grabpack.fire",
+    "attach": "playtime:grabpack.attach",
+    "retract": "playtime:grabpack.retract",
+    "pickup": "playtime:hand.pickup"
+  },
+  "color": "#FFD3312B",
+  "launcher": "right",
+  "abilities": [
+    "playtime:grab",
+    "playtime:pull",
+    "playtime:interact",
+    "playtime:conduct",
+    "playtime:retrieve"
+  ],
+  "targets": [
+    "interactive",
+    "lever",
+    "handle",
+    "button",
+    "scanner",
+    "power_source",
+    "power_receiver",
+    "pullable",
+    "collectible"
+  ],
+  "interactions": [
+    "playtime:red_scanner"
+  ],
+  "range": 24.0,
+  "cooldownTicks": 8,
+  "sortOrder": 1,
+  "cable": {
+    "maxLength": 24.0,
+    "fireSpeed": 2.5,
+    "retractSpeed": 3.0,
+    "maxAttachTicks": 600,
+    "snapFactor": 1.15,
+    "obstructionGraceTicks": 10
+  }
+}

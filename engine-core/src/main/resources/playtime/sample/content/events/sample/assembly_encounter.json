@@ -1,0 +1,36 @@
+{
+  "id": "playtime:sample/assembly_encounter",
+  "trigger": {
+    "type": "manual"
+  },
+  "repeat": "once_per_world",
+  "conditions": [
+    {
+      "type": "not",
+      "condition": {
+        "type": "world_flag",
+        "id": "playtime:sample/peaceful"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "spawn_monster",
+      "id": "playtime:sample/playwright_spawn"
+    },
+    {
+      "type": "play_sound",
+      "sound": "playtime:monster.the_playwright.alert",
+      "relPos": [
+        30,
+        1,
+        8
+      ]
+    },
+    {
+      "type": "subtitle",
+      "text": "Something on the other side of the passage heard the machines.",
+      "delay": 10
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "playtime:pulse_hand",
+  "displayName": "Pulse Hand",
+  "description": "Emits a short-range pulse that wakes pulse receivers and briefly powers compatible devices.",
+  "icon": "playtime:textures/gui/hands/pulse_hand.png",
+  "model": "playtime:geo/hands/pulse_hand.geo.json",
+  "texture": "playtime:textures/entity/hands/pulse_hand.png",
+  "animations": {
+    "fire": "animation.pulse_hand.fire",
+    "retract": "animation.pulse_hand.retract",
+    "equip": "animation.pulse_hand.equip",
+    "use": "animation.pulse_hand.pulse",
+    "idle": "animation.pulse_hand.idle"
+  },
+  "sounds": {
+    "fire": "playtime:pulse_hand.fire",
+    "attach": "playtime:pulse_hand.attach",
+    "retract": "playtime:grabpack.retract",
+    "pickup": "playtime:hand.pickup",
+    "use": "playtime:pulse_hand.pulse"
+  },
+  "color": "#FF19E6C1",
+  "launcher": "right",
+  "abilities": [
+    "playtime:pulse",
+    "playtime:interact"
+  ],
+  "targets": [
+    "pulse_receiver",
+    "surface",
+    "button",
+    "scanner"
+  ],
+  "interactions": [
+    "playtime:pulse"
+  ],
+  "range": 18.0,
+  "cooldownTicks": 60,
+  "sortOrder": 8,
+  "cable": {
+    "maxLength": 18.0,
+    "fireSpeed": 2.5,
+    "retractSpeed": 3.0,
+    "maxAttachTicks": 600,
+    "snapFactor": 1.15,
+    "obstructionGraceTicks": 10
+  },
+  "params": {
+    "pulse_radius": 5.0,
+    "pulse_power_ticks": 100.0
+  },
+  "tutorial": "playtime:tutorial/pulse_hand",
+  "effects": {
+    "pulse": "playtime:pulse_ring"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "id": "playtime:sample/shutdown",
+  "text": "Pull the emergency shutdown",
+  "chapter": "playtime:sample/factory",
+  "order": 5
+}

@@ -1,0 +1,56 @@
+{
+  "id": "playtime:flare_hand",
+  "displayName": "Flare Hand",
+  "description": "Fires flares that light up dark areas and scare off creatures that fear light.",
+  "icon": "playtime:textures/gui/hands/flare_hand.png",
+  "model": "playtime:geo/hands/flare_hand.geo.json",
+  "texture": "playtime:textures/entity/hands/flare_hand.png",
+  "animations": {
+    "fire": "animation.hand.fire",
+    "retract": "animation.hand.retract",
+    "equip": "animation.hand.equip",
+    "use": "animation.hand.use",
+    "idle": "animation.hand.idle"
+  },
+  "sounds": {
+    "fire": "playtime:grabpack.fire",
+    "attach": "playtime:grabpack.attach",
+    "retract": "playtime:grabpack.retract",
+    "pickup": "playtime:hand.pickup"
+  },
+  "color": "#FFF28A1E",
+  "launcher": "right",
+  "abilities": [
+    "playtime:flare"
+  ],
+  "targets": [
+    "surface",
+    "breakable",
+    "scanner"
+  ],
+  "interactions": [
+    "playtime:flare_scanner",
+    "playtime:flammable"
+  ],
+  "range": 32.0,
+  "cooldownTicks": 40,
+  "sortOrder": 4,
+  "cable": {
+    "maxLength": 32.0,
+    "fireSpeed": 2.5,
+    "retractSpeed": 3.0,
+    "maxAttachTicks": 600,
+    "snapFactor": 1.15,
+    "obstructionGraceTicks": 10
+  },
+  "charges": 3,
+  "rechargeTicks": 200,
+  "params": {
+    "flare_light_ticks": 400.0,
+    "scare_radius": 6.0
+  },
+  "grabPacks": [
+    "playtime:grabpack_2",
+    "playtime:salvaged_grabpack"
+  ]
+}

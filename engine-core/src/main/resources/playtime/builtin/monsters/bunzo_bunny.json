@@ -1,0 +1,33 @@
+{
+  "id": "playtime:bunzo_bunny",
+  "displayName": "Bunzo Bunny",
+  "behaviour": "scripted",
+  "description": "Configurable encounter definition (Chapter 2). Original model and textures.",
+  "model": "playtime:geo/monsters/bunzo_bunny.geo.json",
+  "texture": "playtime:textures/entity/monsters/bunzo_bunny.png",
+  "animationFile": "playtime:animations/monsters/bunzo_bunny.animation.json",
+  "animations": {
+    "idle": "animation.bunzo_bunny.idle",
+    "walk": "animation.bunzo_bunny.walk",
+    "run": "animation.bunzo_bunny.run",
+    "sprint": "animation.bunzo_bunny.sprint",
+    "search": "animation.bunzo_bunny.search",
+    "attack": "animation.bunzo_bunny.attack",
+    "stunned": "animation.bunzo_bunny.stunned",
+    "intro": "animation.bunzo_bunny.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.bunzo_bunny.ambient",
+    "alert": "playtime:monster.bunzo_bunny.alert",
+    "attack": "playtime:monster.bunzo_bunny.attack",
+    "footstep": "playtime:monster.bunzo_bunny.step"
+  },
+  "width": 0.9,
+  "height": 2.4,
+  "chaseSpeed": 0.36,
+  "attackRange": 2.0,
+  "captureOutcome": "catch",
+  "params": {
+    "aggressive": 1.0
+  }
+}

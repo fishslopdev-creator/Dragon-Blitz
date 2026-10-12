@@ -1,0 +1,44 @@
+[
+  {
+    "id": "playtime:sample/link/gen_to_node",
+    "name": "Generator feeds junction",
+    "from": "playtime:sample/al_generator",
+    "to": "playtime:sample/al_node",
+    "type": "power"
+  },
+  {
+    "id": "playtime:sample/link/node_to_panel",
+    "name": "Junction feeds line panel",
+    "from": "playtime:sample/al_node",
+    "to": "playtime:sample/al_panel",
+    "type": "power"
+  },
+  {
+    "id": "playtime:sample/link/rx1_conveyor",
+    "name": "Receiver A drives line",
+    "from": "playtime:sample/al_rx_1",
+    "to": "playtime:sample/al_conveyor",
+    "type": "activate"
+  },
+  {
+    "id": "playtime:sample/link/rx2_conveyor",
+    "name": "Receiver B drives line",
+    "from": "playtime:sample/al_rx_2",
+    "to": "playtime:sample/al_conveyor",
+    "type": "activate"
+  },
+  {
+    "id": "playtime:sample/link/backup_to_breaker",
+    "name": "Backup generator to breaker",
+    "from": "playtime:sample/backup_generator",
+    "to": "playtime:sample/backup_breaker",
+    "type": "power"
+  },
+  {
+    "id": "playtime:sample/link/breaker_to_door",
+    "name": "Breaker powers security door",
+    "from": "playtime:sample/backup_breaker",
+    "to": "playtime:sample/exit_door_controller",
+    "type": "power"
+  }
+]

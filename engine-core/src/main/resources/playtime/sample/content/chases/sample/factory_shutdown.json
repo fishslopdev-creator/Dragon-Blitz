@@ -1,0 +1,220 @@
+{
+  "id": "playtime:sample/factory_shutdown",
+  "name": "Factory Shutdown",
+  "trigger": {
+    "type": "device_signal",
+    "id": "playtime:sample/shutdown_lever"
+  },
+  "monster": "playtime:the_playwright",
+  "relSpawn": [
+    30,
+    1,
+    8
+  ],
+  "startDelayTicks": 40,
+  "route": "playtime:sample/shutdown_route",
+  "recovery": "teleport",
+  "checkpoint": "playtime:sample/shutdown_checkpoint",
+  "failure": [
+    "respawn_at_checkpoint",
+    "restart_chase"
+  ],
+  "maxDurationTicks": 3600,
+  "despawnOnEnd": true,
+  "music": "playtime:music.chase",
+  "onStart": [
+    {
+      "type": "despawn_monster",
+      "id": "playtime:the_playwright"
+    },
+    {
+      "type": "objective_complete",
+      "id": "playtime:sample/shutdown"
+    },
+    {
+      "type": "lights",
+      "relArea": [
+        26,
+        0,
+        -10,
+        48,
+        6,
+        10
+      ],
+      "on": false
+    },
+    {
+      "type": "play_sound",
+      "sound": "playtime:alarm",
+      "relPos": [
+        34,
+        4,
+        0
+      ]
+    },
+    {
+      "type": "particles",
+      "id": "playtime:sparks",
+      "relPos": [
+        34,
+        3,
+        0
+      ],
+      "value": 24
+    },
+    {
+      "type": "camera_shake",
+      "ticks": 30,
+      "value": 4
+    },
+    {
+      "type": "title_card",
+      "text": "FACTORY SHUTDOWN",
+      "subtitle": "Restore power to the security door",
+      "ticks": 50
+    }
+  ],
+  "stages": [
+    {
+      "id": "restore_power",
+      "objective": "Restore power to the security door",
+      "timeLimitTicks": 1200,
+      "onEnter": [
+        {
+          "type": "objective_set",
+          "id": "playtime:sample/restore_power"
+        }
+      ],
+      "success": [
+        {
+          "type": "device_powered",
+          "id": "playtime:sample/exit_door_controller"
+        }
+      ],
+      "branches": [
+        {
+          "conditions": [
+            {
+              "type": "flag",
+              "id": "playtime:sample/shortcut"
+            },
+            {
+              "type": "device_powered",
+              "id": "playtime:sample/exit_door_controller"
+            }
+          ],
+          "next": "escape",
+          "actions": [
+            {
+              "type": "subtitle",
+              "text": "The shortcut paid off!"
+            }
+          ]
+        }
+      ],
+      "onSuccess": [
+        {
+          "type": "objective_complete",
+          "id": "playtime:sample/restore_power"
+        },
+        {
+          "type": "subtitle",
+          "text": "The security door grinds open!"
+        }
+      ],
+      "next": "escape"
+    },
+    {
+      "id": "escape",
+      "objective": "Get through the security door",
+      "timeLimitTicks": 600,
+      "onEnter": [
+        {
+          "type": "objective_set",
+          "id": "playtime:sample/escape"
+        }
+      ],
+      "success": [
+        {
+          "type": "flag",
+          "id": "playtime:visited/sample/exit_volume"
+        }
+      ],
+      "next": "complete"
+    }
+  ],
+  "onComplete": [
+    {
+      "type": "lights",
+      "relArea": [
+        26,
+        0,
+        -10,
+        48,
+        6,
+        10
+      ],
+      "on": true
+    },
+    {
+      "type": "stop_sound",
+      "sound": "playtime:alarm"
+    },
+    {
+      "type": "objective_complete",
+      "id": "playtime:sample/escape"
+    },
+    {
+      "type": "title_card",
+      "text": "You made it out",
+      "subtitle": "Sample complete",
+      "ticks": 80
+    },
+    {
+      "type": "chapter_complete",
+      "id": "playtime:sample/factory"
+    }
+  ],
+  "onFail": [
+    {
+      "type": "lights",
+      "relArea": [
+        26,
+        0,
+        -10,
+        48,
+        6,
+        10
+      ],
+      "on": true
+    },
+    {
+      "type": "stop_sound",
+      "sound": "playtime:alarm"
+    },
+    {
+      "type": "set_device",
+      "id": "playtime:sample/backup_breaker",
+      "on": false
+    },
+    {
+      "type": "set_device",
+      "id": "playtime:sample/backup_generator",
+      "on": false
+    },
+    {
+      "type": "set_device",
+      "id": "playtime:sample/shutdown_lever",
+      "on": false
+    },
+    {
+      "type": "door_close",
+      "id": "playtime:sample/exit_door"
+    },
+    {
+      "type": "subtitle",
+      "text": "Pull the shutdown lever to try again.",
+      "delay": 40
+    }
+  ]
+}

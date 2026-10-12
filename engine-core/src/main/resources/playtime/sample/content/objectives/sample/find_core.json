@@ -1,0 +1,6 @@
+{
+  "id": "playtime:sample/find_core",
+  "text": "Find a spare power core",
+  "chapter": "playtime:sample/factory",
+  "order": 1
+}

@@ -1,0 +1,6 @@
+{
+  "id": "playtime:new_player",
+  "displayName": "New Player",
+  "giveGrabPack": false,
+  "tutorial": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "playtime:pressure_hand",
+  "displayName": "Pressure Hand",
+  "description": "Attach, hold to charge, then release a pressurised blast that pushes objects and breaks weak vents, glass and ice.",
+  "icon": "playtime:textures/gui/hands/pressure_hand.png",
+  "model": "playtime:geo/hands/pressure_hand.geo.json",
+  "texture": "playtime:textures/entity/hands/pressure_hand.png",
+  "animations": {
+    "fire": "animation.hand.fire",
+    "retract": "animation.hand.retract",
+    "equip": "animation.hand.equip",
+    "use": "animation.hand.use",
+    "idle": "animation.hand.idle"
+  },
+  "sounds": {
+    "fire": "playtime:grabpack.fire",
+    "attach": "playtime:grabpack.attach",
+    "retract": "playtime:grabpack.retract",
+    "pickup": "playtime:hand.pickup"
+  },
+  "color": "#FF3FB6C9",
+  "launcher": "right",
+  "abilities": [
+    "playtime:grab",
+    "playtime:pressure_blast",
+    "playtime:interact"
+  ],
+  "targets": [
+    "breakable",
+    "pullable",
+    "button"
+  ],
+  "interactions": [
+    "playtime:pressure"
+  ],
+  "range": 16.0,
+  "cooldownTicks": 30,
+  "sortOrder": 6,
+  "cable": {
+    "maxLength": 16.0,
+    "fireSpeed": 2.5,
+    "retractSpeed": 3.0,
+    "maxAttachTicks": 600,
+    "snapFactor": 1.15,
+    "obstructionGraceTicks": 10
+  },
+  "params": {
+    "charge_ticks": 30.0,
+    "blast_strength": 1.5
+  },
+  "grabPacks": [
+    "playtime:grabpack_2",
+    "playtime:salvaged_grabpack"
+  ]
+}

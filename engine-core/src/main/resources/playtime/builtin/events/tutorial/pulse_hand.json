@@ -1,0 +1,26 @@
+{
+  "id": "playtime:tutorial/pulse_hand",
+  "name": "Pulse Hand tutorial",
+  "repeat": "once_per_save",
+  "trigger": {
+    "type": "manual"
+  },
+  "actions": [
+    {
+      "type": "title_card",
+      "text": "Pulse Hand",
+      "subtitle": "Fire it near a teal receiver to wake it up",
+      "ticks": 80
+    },
+    {
+      "type": "subtitle",
+      "text": "Pulse receivers glow teal. The pulse reaches about five blocks from where the hand lands.",
+      "delay": 90
+    },
+    {
+      "type": "subtitle",
+      "text": "A pulsed receiver powers nearby devices for a few seconds. The hand needs three seconds to recharge.",
+      "delay": 180
+    }
+  ]
+}

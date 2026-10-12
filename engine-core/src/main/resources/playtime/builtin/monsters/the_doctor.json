@@ -1,0 +1,33 @@
+{
+  "id": "playtime:the_doctor",
+  "displayName": "The Doctor",
+  "behaviour": "boss",
+  "description": "Configurable encounter definition (Chapter 4). Original model and textures.",
+  "model": "playtime:geo/monsters/the_doctor.geo.json",
+  "texture": "playtime:textures/entity/monsters/the_doctor.png",
+  "animationFile": "playtime:animations/monsters/the_doctor.animation.json",
+  "animations": {
+    "idle": "animation.the_doctor.idle",
+    "walk": "animation.the_doctor.walk",
+    "run": "animation.the_doctor.run",
+    "sprint": "animation.the_doctor.sprint",
+    "search": "animation.the_doctor.search",
+    "attack": "animation.the_doctor.attack",
+    "stunned": "animation.the_doctor.stunned",
+    "intro": "animation.the_doctor.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.the_doctor.ambient",
+    "alert": "playtime:monster.the_doctor.alert",
+    "attack": "playtime:monster.the_doctor.attack",
+    "footstep": "playtime:monster.the_doctor.step"
+  },
+  "width": 1.2,
+  "height": 2.6,
+  "chaseSpeed": 0.3,
+  "attackRange": 2.4,
+  "captureOutcome": "catch",
+  "traits": [
+    "immune_to_stun"
+  ]
+}

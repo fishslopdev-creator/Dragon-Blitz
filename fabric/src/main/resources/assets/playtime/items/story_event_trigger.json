@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "playtime:block/story_event_trigger"
+  }
+}

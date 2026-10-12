@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "playtime:block/access_terminal"
+    }
+  }
+}

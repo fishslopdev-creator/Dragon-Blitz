@@ -1,0 +1,25 @@
+{
+  "id": "playtime:sample/take_core",
+  "trigger": {
+    "type": "manual"
+  },
+  "actions": [
+    {
+      "type": "give_item",
+      "id": "playtime:power_core",
+      "value": 1
+    },
+    {
+      "type": "objective_complete",
+      "id": "playtime:sample/find_core"
+    },
+    {
+      "type": "objective_set",
+      "id": "playtime:sample/restore_generator"
+    },
+    {
+      "type": "subtitle",
+      "text": "A heavy power core. It hums."
+    }
+  ]
+}

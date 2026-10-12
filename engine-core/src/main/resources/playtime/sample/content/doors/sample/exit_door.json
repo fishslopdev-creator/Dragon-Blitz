@@ -1,0 +1,14 @@
+{
+  "id": "playtime:sample/exit_door",
+  "displayName": "Security door",
+  "type": "powered",
+  "relAnchor": [
+    44,
+    1,
+    0
+  ],
+  "width": 2,
+  "height": 3,
+  "facing": "east",
+  "animationTicks": 30
+}

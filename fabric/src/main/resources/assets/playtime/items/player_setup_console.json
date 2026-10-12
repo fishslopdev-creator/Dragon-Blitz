@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "playtime:block/player_setup_console"
+  }
+}
