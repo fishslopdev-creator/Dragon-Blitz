@@ -1,0 +1,7 @@
+{
+  "id": "playtime:sample/pulse_pickup",
+  "hand": "playtime:pulse_hand",
+  "mode": "permanent",
+  "event": "playtime:sample/got_pulse_hand",
+  "autoEquip": true
+}

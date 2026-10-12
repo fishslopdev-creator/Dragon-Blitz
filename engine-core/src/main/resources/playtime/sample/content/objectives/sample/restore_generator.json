@@ -1,0 +1,6 @@
+{
+  "id": "playtime:sample/restore_generator",
+  "text": "Restore the assembly generator",
+  "chapter": "playtime:sample/factory",
+  "order": 2
+}

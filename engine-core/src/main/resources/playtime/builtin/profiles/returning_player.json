@@ -1,0 +1,13 @@
+{
+  "id": "playtime:returning_player",
+  "displayName": "Returning Player",
+  "giveGrabPack": true,
+  "grabPack": "playtime:grabpack",
+  "startingHands": [
+    "playtime:blue_hand",
+    "playtime:red_hand"
+  ],
+  "startingLeftHand": "playtime:blue_hand",
+  "startingRightHand": "playtime:red_hand",
+  "tutorial": false
+}

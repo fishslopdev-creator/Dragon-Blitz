@@ -1,0 +1,36 @@
+{
+  "id": "playtime:smiling_critter_husk",
+  "displayName": "Smiling Critter (hostile)",
+  "behaviour": "swarm",
+  "description": "Configurable encounter definition (Chapter 3). Original model and textures.",
+  "model": "playtime:geo/monsters/smiling_critter_husk.geo.json",
+  "texture": "playtime:textures/entity/monsters/smiling_critter_husk.png",
+  "animationFile": "playtime:animations/monsters/smiling_critter_husk.animation.json",
+  "animations": {
+    "idle": "animation.smiling_critter_husk.idle",
+    "walk": "animation.smiling_critter_husk.walk",
+    "run": "animation.smiling_critter_husk.run",
+    "sprint": "animation.smiling_critter_husk.sprint",
+    "search": "animation.smiling_critter_husk.search",
+    "attack": "animation.smiling_critter_husk.attack",
+    "stunned": "animation.smiling_critter_husk.stunned",
+    "intro": "animation.smiling_critter_husk.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.smiling_critter_husk.ambient",
+    "alert": "playtime:monster.smiling_critter_husk.alert",
+    "attack": "playtime:monster.smiling_critter_husk.attack",
+    "footstep": "playtime:monster.smiling_critter_husk.step"
+  },
+  "width": 0.8,
+  "height": 1.8,
+  "stunnedBy": [
+    "playtime:flare"
+  ],
+  "maxInstances": 4,
+  "walkSpeed": 0.18,
+  "chaseSpeed": 0.33,
+  "attackRange": 1.6,
+  "attackDamage": 6,
+  "captureOutcome": "damage"
+}

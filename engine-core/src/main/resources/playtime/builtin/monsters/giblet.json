@@ -1,0 +1,31 @@
+{
+  "id": "playtime:giblet",
+  "displayName": "Giblet",
+  "behaviour": "npc",
+  "description": "Configurable encounter definition (optional NPC). Original model and textures.",
+  "model": "playtime:geo/monsters/giblet.geo.json",
+  "texture": "playtime:textures/entity/monsters/giblet.png",
+  "animationFile": "playtime:animations/monsters/giblet.animation.json",
+  "animations": {
+    "idle": "animation.giblet.idle",
+    "walk": "animation.giblet.walk",
+    "run": "animation.giblet.run",
+    "sprint": "animation.giblet.sprint",
+    "search": "animation.giblet.search",
+    "attack": "animation.giblet.attack",
+    "stunned": "animation.giblet.stunned",
+    "intro": "animation.giblet.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.giblet.ambient",
+    "alert": "playtime:monster.giblet.alert",
+    "attack": "playtime:monster.giblet.attack",
+    "footstep": "playtime:monster.giblet.step"
+  },
+  "width": 0.8,
+  "height": 1.2,
+  "hostile": false,
+  "params": {
+    "talk_range": 6.0
+  }
+}

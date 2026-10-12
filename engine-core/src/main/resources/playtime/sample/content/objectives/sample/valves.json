@@ -1,0 +1,6 @@
+{
+  "id": "playtime:sample/valves",
+  "text": "Open all three valves before the pressure drops",
+  "chapter": "playtime:sample/factory",
+  "order": 4
+}

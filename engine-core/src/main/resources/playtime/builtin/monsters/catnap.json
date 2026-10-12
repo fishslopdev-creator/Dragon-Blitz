@@ -1,0 +1,43 @@
+{
+  "id": "playtime:catnap",
+  "displayName": "CatNap",
+  "behaviour": "stealth",
+  "description": "Configurable encounter definition (Chapter 3). Original model and textures.",
+  "model": "playtime:geo/monsters/catnap.geo.json",
+  "texture": "playtime:textures/entity/monsters/catnap.png",
+  "animationFile": "playtime:animations/monsters/catnap.animation.json",
+  "animations": {
+    "idle": "animation.catnap.idle",
+    "walk": "animation.catnap.walk",
+    "run": "animation.catnap.run",
+    "sprint": "animation.catnap.sprint",
+    "search": "animation.catnap.search",
+    "attack": "animation.catnap.attack",
+    "stunned": "animation.catnap.stunned",
+    "intro": "animation.catnap.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.catnap.ambient",
+    "alert": "playtime:monster.catnap.alert",
+    "attack": "playtime:monster.catnap.attack",
+    "footstep": "playtime:monster.catnap.step"
+  },
+  "width": 1.0,
+  "height": 3.6,
+  "visionRange": 32,
+  "walkSpeed": 0.2,
+  "chaseSpeed": 0.3,
+  "sprintDurationTicks": 0,
+  "attackRange": 2.6,
+  "captureOutcome": "catch",
+  "traits": [
+    "climbs_walls",
+    "smoke_emitter"
+  ],
+  "ambientParticle": "playtime:red_smoke",
+  "ambientParticleInterval": 6,
+  "params": {
+    "watched_angle": 25.0,
+    "retreat_distance": 5.0
+  }
+}

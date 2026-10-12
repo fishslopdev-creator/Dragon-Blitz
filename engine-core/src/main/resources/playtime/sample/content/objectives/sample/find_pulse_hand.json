@@ -1,0 +1,6 @@
+{
+  "id": "playtime:sample/find_pulse_hand",
+  "text": "Find the tool that wakes the receivers",
+  "chapter": "playtime:sample/factory",
+  "order": 0
+}

@@ -1,0 +1,9 @@
+{
+  "id": "playtime:sample/tape_1",
+  "kind": "vhs_tape",
+  "title": "Line Safety, Take 3",
+  "text": "FOREMAN: Rule one. Nobody runs the line alone. Rule two. When the alarms go, you do NOT wait for the stagehand to finish its route. You find the backup breaker and you get out through security. Rule three... is there a rule three? Cut.",
+  "audio": "playtime:tape.line_safety",
+  "durationTicks": 400,
+  "chapter": "playtime:sample/factory"
+}

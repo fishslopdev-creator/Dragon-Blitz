@@ -1,0 +1,18 @@
+{
+  "id": "playtime:sample/intro",
+  "trigger": {
+    "type": "chapter_start",
+    "id": "playtime:sample/factory"
+  },
+  "actions": [
+    {
+      "type": "objective_set",
+      "id": "playtime:sample/find_pulse_hand"
+    },
+    {
+      "type": "subtitle",
+      "text": "A radio crackles somewhere to your right.",
+      "delay": 60
+    }
+  ]
+}

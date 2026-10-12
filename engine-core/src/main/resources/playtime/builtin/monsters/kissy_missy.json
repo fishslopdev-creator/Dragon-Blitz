@@ -1,0 +1,31 @@
+{
+  "id": "playtime:kissy_missy",
+  "displayName": "Kissy Missy",
+  "behaviour": "npc",
+  "description": "Configurable encounter definition (optional NPC). Original model and textures.",
+  "model": "playtime:geo/monsters/kissy_missy.geo.json",
+  "texture": "playtime:textures/entity/monsters/kissy_missy.png",
+  "animationFile": "playtime:animations/monsters/kissy_missy.animation.json",
+  "animations": {
+    "idle": "animation.kissy_missy.idle",
+    "walk": "animation.kissy_missy.walk",
+    "run": "animation.kissy_missy.run",
+    "sprint": "animation.kissy_missy.sprint",
+    "search": "animation.kissy_missy.search",
+    "attack": "animation.kissy_missy.attack",
+    "stunned": "animation.kissy_missy.stunned",
+    "intro": "animation.kissy_missy.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.kissy_missy.ambient",
+    "alert": "playtime:monster.kissy_missy.alert",
+    "attack": "playtime:monster.kissy_missy.attack",
+    "footstep": "playtime:monster.kissy_missy.step"
+  },
+  "width": 0.8,
+  "height": 4.0,
+  "hostile": false,
+  "params": {
+    "talk_range": 6.0
+  }
+}

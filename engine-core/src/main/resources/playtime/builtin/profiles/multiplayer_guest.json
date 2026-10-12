@@ -1,0 +1,16 @@
+{
+  "id": "playtime:multiplayer_guest",
+  "displayName": "Multiplayer Guest",
+  "giveGrabPack": true,
+  "grabPack": "playtime:grabpack",
+  "startingHands": [
+    "playtime:blue_hand"
+  ],
+  "startingLeftHand": "playtime:blue_hand",
+  "sharedProgression": true,
+  "tutorial": false,
+  "deniedInteractions": [
+    "playtime:device/setup_console",
+    "playtime:device/chapter_transition"
+  ]
+}

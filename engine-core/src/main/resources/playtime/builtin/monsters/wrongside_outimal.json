@@ -1,0 +1,35 @@
+{
+  "id": "playtime:wrongside_outimal",
+  "displayName": "Wrongside Outimal",
+  "behaviour": "swarm",
+  "description": "Configurable encounter definition (Chapter 5). Original model and textures.",
+  "model": "playtime:geo/monsters/wrongside_outimal.geo.json",
+  "texture": "playtime:textures/entity/monsters/wrongside_outimal.png",
+  "animationFile": "playtime:animations/monsters/wrongside_outimal.animation.json",
+  "animations": {
+    "idle": "animation.wrongside_outimal.idle",
+    "walk": "animation.wrongside_outimal.walk",
+    "run": "animation.wrongside_outimal.run",
+    "sprint": "animation.wrongside_outimal.sprint",
+    "search": "animation.wrongside_outimal.search",
+    "attack": "animation.wrongside_outimal.attack",
+    "stunned": "animation.wrongside_outimal.stunned",
+    "intro": "animation.wrongside_outimal.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.wrongside_outimal.ambient",
+    "alert": "playtime:monster.wrongside_outimal.alert",
+    "attack": "playtime:monster.wrongside_outimal.attack",
+    "footstep": "playtime:monster.wrongside_outimal.step"
+  },
+  "width": 0.8,
+  "height": 1.6,
+  "stunnedBy": [
+    "playtime:flare"
+  ],
+  "maxInstances": 4,
+  "chaseSpeed": 0.34,
+  "attackRange": 1.6,
+  "attackDamage": 5,
+  "captureOutcome": "damage"
+}

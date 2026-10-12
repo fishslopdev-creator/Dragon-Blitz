@@ -1,0 +1,13 @@
+{
+  "id": "playtime:sample/visitor",
+  "displayName": "Factory Visitor",
+  "giveGrabPack": true,
+  "grabPack": "playtime:grabpack_2",
+  "startingHands": [
+    "playtime:blue_hand",
+    "playtime:red_hand"
+  ],
+  "startingLeftHand": "playtime:blue_hand",
+  "startingRightHand": "playtime:red_hand",
+  "tutorial": true
+}

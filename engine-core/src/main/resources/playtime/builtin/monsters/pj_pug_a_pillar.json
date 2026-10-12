@@ -1,0 +1,32 @@
+{
+  "id": "playtime:pj_pug_a_pillar",
+  "displayName": "PJ Pug-a-Pillar",
+  "behaviour": "scripted",
+  "description": "Configurable encounter definition (Chapter 2). Original model and textures.",
+  "model": "playtime:geo/monsters/pj_pug_a_pillar.geo.json",
+  "texture": "playtime:textures/entity/monsters/pj_pug_a_pillar.png",
+  "animationFile": "playtime:animations/monsters/pj_pug_a_pillar.animation.json",
+  "animations": {
+    "idle": "animation.pj_pug_a_pillar.idle",
+    "walk": "animation.pj_pug_a_pillar.walk",
+    "run": "animation.pj_pug_a_pillar.run",
+    "sprint": "animation.pj_pug_a_pillar.sprint",
+    "search": "animation.pj_pug_a_pillar.search",
+    "attack": "animation.pj_pug_a_pillar.attack",
+    "stunned": "animation.pj_pug_a_pillar.stunned",
+    "intro": "animation.pj_pug_a_pillar.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.pj_pug_a_pillar.ambient",
+    "alert": "playtime:monster.pj_pug_a_pillar.alert",
+    "attack": "playtime:monster.pj_pug_a_pillar.attack",
+    "footstep": "playtime:monster.pj_pug_a_pillar.step"
+  },
+  "width": 2.0,
+  "height": 1.6,
+  "chaseSpeed": 0.4,
+  "sprintSpeed": 0.4,
+  "attackRange": 2.0,
+  "captureOutcome": "catch",
+  "recovery": "teleport"
+}

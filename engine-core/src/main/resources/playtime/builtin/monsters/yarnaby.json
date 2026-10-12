@@ -1,0 +1,37 @@
+{
+  "id": "playtime:yarnaby",
+  "displayName": "Yarnaby",
+  "behaviour": "hunter",
+  "description": "Configurable encounter definition (Chapter 4). Original model and textures.",
+  "model": "playtime:geo/monsters/yarnaby.geo.json",
+  "texture": "playtime:textures/entity/monsters/yarnaby.png",
+  "animationFile": "playtime:animations/monsters/yarnaby.animation.json",
+  "animations": {
+    "idle": "animation.yarnaby.idle",
+    "walk": "animation.yarnaby.walk",
+    "run": "animation.yarnaby.run",
+    "sprint": "animation.yarnaby.sprint",
+    "search": "animation.yarnaby.search",
+    "attack": "animation.yarnaby.attack",
+    "stunned": "animation.yarnaby.stunned",
+    "intro": "animation.yarnaby.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.yarnaby.ambient",
+    "alert": "playtime:monster.yarnaby.alert",
+    "attack": "playtime:monster.yarnaby.attack",
+    "footstep": "playtime:monster.yarnaby.step"
+  },
+  "width": 1.4,
+  "height": 3.4,
+  "visionRange": 26,
+  "hearingRange": 22,
+  "walkSpeed": 0.18,
+  "chaseSpeed": 0.34,
+  "memoryTicks": 160,
+  "searchTicks": 300,
+  "captureOutcome": "catch",
+  "traits": [
+    "opens_doors"
+  ]
+}

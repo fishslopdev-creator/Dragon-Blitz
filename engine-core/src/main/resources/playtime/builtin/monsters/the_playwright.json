@@ -1,0 +1,53 @@
+{
+  "id": "playtime:the_playwright",
+  "displayName": "The Playwright",
+  "behaviour": "hunter",
+  "description": "An original toy-factory stagehand: a puppet theatre on stilt legs with a marionette-bar head. Hunts by sound, patrols its route, and follows chase waypoints.",
+  "model": "playtime:geo/monsters/the_playwright.geo.json",
+  "texture": "playtime:textures/entity/monsters/the_playwright.png",
+  "animationFile": "playtime:animations/monsters/the_playwright.animation.json",
+  "animations": {
+    "idle": "animation.the_playwright.idle",
+    "walk": "animation.the_playwright.walk",
+    "run": "animation.the_playwright.run",
+    "sprint": "animation.the_playwright.sprint",
+    "search": "animation.the_playwright.search",
+    "attack": "animation.the_playwright.attack",
+    "stunned": "animation.the_playwright.stunned",
+    "intro": "animation.the_playwright.curtain_call",
+    "turn": "animation.the_playwright.turn"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.the_playwright.ambient",
+    "alert": "playtime:monster.the_playwright.alert",
+    "attack": "playtime:monster.the_playwright.attack",
+    "footstep": "playtime:monster.the_playwright.step"
+  },
+  "width": 1.1,
+  "height": 3.8,
+  "visionRange": 26,
+  "fovDegrees": 120,
+  "hearingRange": 24,
+  "walkSpeed": 0.16,
+  "chaseSpeed": 0.31,
+  "sprintSpeed": 0.42,
+  "sprintDurationTicks": 50,
+  "sprintCooldownTicks": 120,
+  "memoryTicks": 140,
+  "searchTicks": 260,
+  "attackRange": 2.6,
+  "captureOutcome": "catch",
+  "recovery": "skip_waypoint",
+  "distractedBy": [
+    "playtime:alarm",
+    "playtime:music"
+  ],
+  "stunnedBy": [
+    "playtime:flare",
+    "playtime:pulse"
+  ],
+  "stunTicks": 60,
+  "traits": [
+    "opens_doors"
+  ]
+}

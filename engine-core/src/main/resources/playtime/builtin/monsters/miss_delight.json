@@ -1,0 +1,35 @@
+{
+  "id": "playtime:miss_delight",
+  "displayName": "Miss Delight",
+  "behaviour": "stalker",
+  "description": "Configurable encounter definition (Chapter 3). Original model and textures.",
+  "model": "playtime:geo/monsters/miss_delight.geo.json",
+  "texture": "playtime:textures/entity/monsters/miss_delight.png",
+  "animationFile": "playtime:animations/monsters/miss_delight.animation.json",
+  "animations": {
+    "idle": "animation.miss_delight.idle",
+    "walk": "animation.miss_delight.walk",
+    "run": "animation.miss_delight.run",
+    "sprint": "animation.miss_delight.sprint",
+    "search": "animation.miss_delight.search",
+    "attack": "animation.miss_delight.attack",
+    "stunned": "animation.miss_delight.stunned",
+    "intro": "animation.miss_delight.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.miss_delight.ambient",
+    "alert": "playtime:monster.miss_delight.alert",
+    "attack": "playtime:monster.miss_delight.attack",
+    "footstep": "playtime:monster.miss_delight.step"
+  },
+  "width": 0.9,
+  "height": 2.6,
+  "stunnedBy": [
+    "playtime:flare"
+  ],
+  "visionRange": 22,
+  "walkSpeed": 0.16,
+  "chaseSpeed": 0.3,
+  "attackRange": 2.0,
+  "captureOutcome": "catch"
+}

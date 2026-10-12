@@ -1,0 +1,10 @@
+{
+  "id": "playtime:salvaged_grabpack",
+  "displayName": "Salvaged GrabPack",
+  "model": "playtime:geo/grabpack_2.geo.json",
+  "texture": "playtime:textures/entity/salvaged_grabpack.png",
+  "cableLength": 22.0,
+  "handWheel": true,
+  "rightLauncherSlots": 4,
+  "hasLeftLauncher": true
+}

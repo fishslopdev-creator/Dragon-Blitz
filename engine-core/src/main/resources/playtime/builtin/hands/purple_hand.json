@@ -1,0 +1,51 @@
+{
+  "id": "playtime:purple_hand",
+  "displayName": "Purple Hand",
+  "description": "Activates purple jump pads to launch you upwards.",
+  "icon": "playtime:textures/gui/hands/purple_hand.png",
+  "model": "playtime:geo/hands/purple_hand.geo.json",
+  "texture": "playtime:textures/entity/hands/purple_hand.png",
+  "animations": {
+    "fire": "animation.hand.fire",
+    "retract": "animation.hand.retract",
+    "equip": "animation.hand.equip",
+    "use": "animation.hand.use",
+    "idle": "animation.hand.idle"
+  },
+  "sounds": {
+    "fire": "playtime:grabpack.fire",
+    "attach": "playtime:grabpack.attach",
+    "retract": "playtime:grabpack.retract",
+    "pickup": "playtime:hand.pickup"
+  },
+  "color": 4287250385,
+  "launcher": "right",
+  "abilities": [
+    "playtime:grab",
+    "playtime:launch_pad"
+  ],
+  "targets": [
+    "launch_pad",
+    "button",
+    "scanner"
+  ],
+  "interactions": [
+    "playtime:purple_pad",
+    "playtime:purple_scanner"
+  ],
+  "range": 20.0,
+  "cooldownTicks": 20,
+  "sortOrder": 3,
+  "cable": {
+    "maxLength": 20.0,
+    "fireSpeed": 2.5,
+    "retractSpeed": 3.0,
+    "maxAttachTicks": 600,
+    "snapFactor": 1.15,
+    "obstructionGraceTicks": 10
+  },
+  "grabPacks": [
+    "playtime:grabpack_2",
+    "playtime:salvaged_grabpack"
+  ]
+}

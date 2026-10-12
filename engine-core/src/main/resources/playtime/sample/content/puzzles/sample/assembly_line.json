@@ -1,0 +1,138 @@
+{
+  "id": "playtime:sample/assembly_line",
+  "displayName": "The Assembly Line",
+  "template": "playtime:staged",
+  "reset": "manual",
+  "resetDevices": false,
+  "persistent": true,
+  "requiredHands": [
+    "playtime:pulse_hand"
+  ],
+  "linkedDoors": [
+    "playtime:sample/factory_passage"
+  ],
+  "settings": {
+    "stages": [
+      {
+        "name": "Find the missing power core",
+        "template": "playtime:fuse_collection",
+        "settings": {
+          "fuseBox": "playtime:sample/al_generator",
+          "slots": {
+            "core": "playtime:power_core"
+          }
+        },
+        "onComplete": [
+          {
+            "type": "subtitle",
+            "text": "The core clicks into place. Now start the generator."
+          }
+        ]
+      },
+      {
+        "name": "Restore the generator",
+        "template": "playtime:power_routing",
+        "settings": {
+          "receivers": [
+            "playtime:sample/al_panel"
+          ]
+        },
+        "onEnter": [
+          {
+            "type": "objective_set",
+            "id": "playtime:sample/restore_generator"
+          }
+        ],
+        "onComplete": [
+          {
+            "type": "objective_complete",
+            "id": "playtime:sample/restore_generator"
+          },
+          {
+            "type": "objective_set",
+            "id": "playtime:sample/wake_receivers"
+          },
+          {
+            "type": "lights",
+            "relArea": [
+              8,
+              0,
+              -8,
+              24,
+              6,
+              8
+            ],
+            "on": true
+          }
+        ]
+      },
+      {
+        "name": "Wake both receivers together",
+        "template": "playtime:multi_room",
+        "settings": {
+          "active": [
+            "playtime:sample/al_conveyor"
+          ]
+        },
+        "onComplete": [
+          {
+            "type": "objective_complete",
+            "id": "playtime:sample/wake_receivers"
+          },
+          {
+            "type": "play_sound",
+            "sound": "playtime:machine.conveyor_start",
+            "relPos": [
+              18,
+              1,
+              0
+            ]
+          },
+          {
+            "type": "objective_set",
+            "id": "playtime:sample/valves"
+          }
+        ]
+      },
+      {
+        "name": "Open all three valves",
+        "template": "playtime:timed_switches",
+        "settings": {
+          "switches": [
+            "playtime:sample/al_valve_a",
+            "playtime:sample/al_valve_b",
+            "playtime:sample/al_valve_c"
+          ],
+          "windowTicks": 160
+        },
+        "onFail": [
+          {
+            "type": "subtitle",
+            "text": "The pressure drops. The valves slam shut."
+          }
+        ]
+      }
+    ]
+  },
+  "onComplete": [
+    {
+      "type": "objective_complete",
+      "id": "playtime:sample/valves"
+    },
+    {
+      "type": "title_card",
+      "text": "Assembly line running",
+      "subtitle": "The passage opens",
+      "ticks": 60
+    },
+    {
+      "type": "objective_set",
+      "id": "playtime:sample/shutdown"
+    },
+    {
+      "type": "trigger_event",
+      "id": "playtime:sample/assembly_encounter",
+      "delay": 40
+    }
+  ]
+}

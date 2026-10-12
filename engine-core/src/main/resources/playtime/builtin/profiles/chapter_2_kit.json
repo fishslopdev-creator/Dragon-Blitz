@@ -1,0 +1,14 @@
+{
+  "id": "playtime:chapter_2_kit",
+  "displayName": "Chapter 2 Starting Kit",
+  "giveGrabPack": true,
+  "grabPack": "playtime:grabpack",
+  "startingHands": [
+    "playtime:blue_hand",
+    "playtime:red_hand"
+  ],
+  "startingLeftHand": "playtime:blue_hand",
+  "startingRightHand": "playtime:red_hand",
+  "startingChapter": "playtime:chapter_2",
+  "tutorial": false
+}

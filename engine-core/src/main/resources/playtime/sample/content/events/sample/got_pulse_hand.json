@@ -1,0 +1,16 @@
+{
+  "id": "playtime:sample/got_pulse_hand",
+  "trigger": {
+    "type": "manual"
+  },
+  "actions": [
+    {
+      "type": "objective_complete",
+      "id": "playtime:sample/find_pulse_hand"
+    },
+    {
+      "type": "objective_set",
+      "id": "playtime:sample/find_core"
+    }
+  ]
+}

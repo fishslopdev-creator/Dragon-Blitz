@@ -1,0 +1,37 @@
+{
+  "id": "playtime:mini_huggies",
+  "displayName": "Mini Huggies",
+  "behaviour": "swarm",
+  "description": "Configurable encounter definition (Chapter 2). Original model and textures.",
+  "model": "playtime:geo/monsters/mini_huggies.geo.json",
+  "texture": "playtime:textures/entity/monsters/mini_huggies.png",
+  "animationFile": "playtime:animations/monsters/mini_huggies.animation.json",
+  "animations": {
+    "idle": "animation.mini_huggies.idle",
+    "walk": "animation.mini_huggies.walk",
+    "run": "animation.mini_huggies.run",
+    "sprint": "animation.mini_huggies.sprint",
+    "search": "animation.mini_huggies.search",
+    "attack": "animation.mini_huggies.attack",
+    "stunned": "animation.mini_huggies.stunned",
+    "intro": "animation.mini_huggies.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.mini_huggies.ambient",
+    "alert": "playtime:monster.mini_huggies.alert",
+    "attack": "playtime:monster.mini_huggies.attack",
+    "footstep": "playtime:monster.mini_huggies.step"
+  },
+  "width": 0.6,
+  "height": 1.2,
+  "stunnedBy": [
+    "playtime:flare"
+  ],
+  "maxInstances": 3,
+  "visionRange": 18,
+  "walkSpeed": 0.2,
+  "chaseSpeed": 0.36,
+  "attackRange": 1.4,
+  "attackDamage": 4,
+  "captureOutcome": "damage"
+}

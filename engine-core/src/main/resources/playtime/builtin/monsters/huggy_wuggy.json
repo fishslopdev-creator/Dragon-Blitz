@@ -1,0 +1,42 @@
+{
+  "id": "playtime:huggy_wuggy",
+  "displayName": "Huggy Wuggy",
+  "behaviour": "stalker",
+  "description": "Configurable encounter definition (Chapter 1). Original model and textures.",
+  "model": "playtime:geo/monsters/huggy_wuggy.geo.json",
+  "texture": "playtime:textures/entity/monsters/huggy_wuggy.png",
+  "animationFile": "playtime:animations/monsters/huggy_wuggy.animation.json",
+  "animations": {
+    "idle": "animation.huggy_wuggy.idle",
+    "walk": "animation.huggy_wuggy.walk",
+    "run": "animation.huggy_wuggy.run",
+    "sprint": "animation.huggy_wuggy.sprint",
+    "search": "animation.huggy_wuggy.search",
+    "attack": "animation.huggy_wuggy.attack",
+    "stunned": "animation.huggy_wuggy.stunned",
+    "intro": "animation.huggy_wuggy.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.huggy_wuggy.ambient",
+    "alert": "playtime:monster.huggy_wuggy.alert",
+    "attack": "playtime:monster.huggy_wuggy.attack",
+    "footstep": "playtime:monster.huggy_wuggy.step"
+  },
+  "width": 1.0,
+  "height": 4.2,
+  "visionRange": 28,
+  "hearingRange": 18,
+  "walkSpeed": 0.17,
+  "chaseSpeed": 0.34,
+  "sprintSpeed": 0.46,
+  "sprintDurationTicks": 70,
+  "attackRange": 2.4,
+  "captureOutcome": "catch",
+  "traits": [
+    "opens_doors",
+    "vent_travel"
+  ],
+  "params": {
+    "patrol_wait": 30.0
+  }
+}

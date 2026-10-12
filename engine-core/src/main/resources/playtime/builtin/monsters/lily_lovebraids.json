@@ -1,0 +1,35 @@
+{
+  "id": "playtime:lily_lovebraids",
+  "displayName": "Lily Lovebraids",
+  "behaviour": "stalker",
+  "description": "Configurable encounter definition (Chapter 5). Original model and textures.",
+  "model": "playtime:geo/monsters/lily_lovebraids.geo.json",
+  "texture": "playtime:textures/entity/monsters/lily_lovebraids.png",
+  "animationFile": "playtime:animations/monsters/lily_lovebraids.animation.json",
+  "animations": {
+    "idle": "animation.lily_lovebraids.idle",
+    "walk": "animation.lily_lovebraids.walk",
+    "run": "animation.lily_lovebraids.run",
+    "sprint": "animation.lily_lovebraids.sprint",
+    "search": "animation.lily_lovebraids.search",
+    "attack": "animation.lily_lovebraids.attack",
+    "stunned": "animation.lily_lovebraids.stunned",
+    "intro": "animation.lily_lovebraids.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.lily_lovebraids.ambient",
+    "alert": "playtime:monster.lily_lovebraids.alert",
+    "attack": "playtime:monster.lily_lovebraids.attack",
+    "footstep": "playtime:monster.lily_lovebraids.step"
+  },
+  "width": 0.9,
+  "height": 2.8,
+  "visionRange": 26,
+  "walkSpeed": 0.17,
+  "chaseSpeed": 0.33,
+  "attackRange": 2.6,
+  "captureOutcome": "catch",
+  "traits": [
+    "long_reach"
+  ]
+}

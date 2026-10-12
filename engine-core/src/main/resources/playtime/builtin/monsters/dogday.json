@@ -1,0 +1,31 @@
+{
+  "id": "playtime:dogday",
+  "displayName": "DogDay",
+  "behaviour": "npc",
+  "description": "Configurable encounter definition (Chapter 3). Original model and textures.",
+  "model": "playtime:geo/monsters/dogday.geo.json",
+  "texture": "playtime:textures/entity/monsters/dogday.png",
+  "animationFile": "playtime:animations/monsters/dogday.animation.json",
+  "animations": {
+    "idle": "animation.dogday.idle",
+    "walk": "animation.dogday.walk",
+    "run": "animation.dogday.run",
+    "sprint": "animation.dogday.sprint",
+    "search": "animation.dogday.search",
+    "attack": "animation.dogday.attack",
+    "stunned": "animation.dogday.stunned",
+    "intro": "animation.dogday.intro"
+  },
+  "sounds": {
+    "ambient": "playtime:monster.dogday.ambient",
+    "alert": "playtime:monster.dogday.alert",
+    "attack": "playtime:monster.dogday.attack",
+    "footstep": "playtime:monster.dogday.step"
+  },
+  "width": 0.9,
+  "height": 2.0,
+  "hostile": false,
+  "params": {
+    "talk_range": 6.0
+  }
+}

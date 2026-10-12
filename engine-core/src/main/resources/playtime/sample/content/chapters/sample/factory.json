@@ -1,0 +1,14 @@
+{
+  "id": "playtime:sample/factory",
+  "name": "The Assembly Floor",
+  "subtitle": "A Playtime Engine sample",
+  "order": 0,
+  "startCheckpoint": "playtime:sample/start",
+  "hiddenUntilReached": false,
+  "onComplete": [
+    {
+      "type": "credits",
+      "id": "playtime:sample/credits"
+    }
+  ]
+}
