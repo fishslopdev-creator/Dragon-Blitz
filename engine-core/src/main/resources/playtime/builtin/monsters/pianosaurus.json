@@ -3,9 +3,9 @@
   "displayName": "Pianosaurus",
   "behaviour": "sound_hunter",
   "description": "Configurable encounter definition (Chapter 4). Original model and textures.",
-  "model": "playtime:geo/monsters/pianosaurus.geo.json",
+  "model": "playtime:monsters/pianosaurus",
   "texture": "playtime:textures/entity/monsters/pianosaurus.png",
-  "animationFile": "playtime:animations/monsters/pianosaurus.animation.json",
+  "animationFile": "playtime:monsters/pianosaurus",
   "animations": {
     "idle": "animation.pianosaurus.idle",
     "walk": "animation.pianosaurus.walk",

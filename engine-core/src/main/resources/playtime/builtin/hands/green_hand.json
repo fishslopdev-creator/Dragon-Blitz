@@ -3,7 +3,7 @@
   "displayName": "Green Hand",
   "description": "Stores an electrical charge from a power source and releases it into receivers and nodes.",
   "icon": "playtime:textures/gui/hands/green_hand.png",
-  "model": "playtime:geo/hands/green_hand.geo.json",
+  "model": "playtime:hands/green_hand",
   "texture": "playtime:textures/entity/hands/green_hand.png",
   "animations": {
     "fire": "animation.hand.fire",

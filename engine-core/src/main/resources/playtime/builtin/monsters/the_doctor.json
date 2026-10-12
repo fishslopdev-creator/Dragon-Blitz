@@ -3,9 +3,9 @@
   "displayName": "The Doctor",
   "behaviour": "boss",
   "description": "Configurable encounter definition (Chapter 4). Original model and textures.",
-  "model": "playtime:geo/monsters/the_doctor.geo.json",
+  "model": "playtime:monsters/the_doctor",
   "texture": "playtime:textures/entity/monsters/the_doctor.png",
-  "animationFile": "playtime:animations/monsters/the_doctor.animation.json",
+  "animationFile": "playtime:monsters/the_doctor",
   "animations": {
     "idle": "animation.the_doctor.idle",
     "walk": "animation.the_doctor.walk",

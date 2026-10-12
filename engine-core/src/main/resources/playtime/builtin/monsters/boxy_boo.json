@@ -3,9 +3,9 @@
   "displayName": "Boxy Boo",
   "behaviour": "ambusher",
   "description": "Configurable encounter definition (Chapter 4). Original model and textures.",
-  "model": "playtime:geo/monsters/boxy_boo.geo.json",
+  "model": "playtime:monsters/boxy_boo",
   "texture": "playtime:textures/entity/monsters/boxy_boo.png",
-  "animationFile": "playtime:animations/monsters/boxy_boo.animation.json",
+  "animationFile": "playtime:monsters/boxy_boo",
   "animations": {
     "hidden": "animation.boxy_boo.hidden",
     "ambush": "animation.boxy_boo.unfold",

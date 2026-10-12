@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "active=false,powered=false": {
+      "model": "playtime:block/logic_gate"
+    },
+    "active=false,powered=true": {
+      "model": "playtime:block/logic_gate"
+    },
+    "active=true,powered=false": {
+      "model": "playtime:block/logic_gate_on"
+    },
+    "active=true,powered=true": {
+      "model": "playtime:block/logic_gate_on"
+    }
+  }
+}

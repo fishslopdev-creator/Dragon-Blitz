@@ -3,9 +3,9 @@
   "displayName": "Bunzo Bunny",
   "behaviour": "scripted",
   "description": "Configurable encounter definition (Chapter 2). Original model and textures.",
-  "model": "playtime:geo/monsters/bunzo_bunny.geo.json",
+  "model": "playtime:monsters/bunzo_bunny",
   "texture": "playtime:textures/entity/monsters/bunzo_bunny.png",
-  "animationFile": "playtime:animations/monsters/bunzo_bunny.animation.json",
+  "animationFile": "playtime:monsters/bunzo_bunny",
   "animations": {
     "idle": "animation.bunzo_bunny.idle",
     "walk": "animation.bunzo_bunny.walk",

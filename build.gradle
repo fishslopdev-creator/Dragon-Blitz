@@ -5,6 +5,13 @@ allprojects {
 
 subprojects {
     repositories {
+        // Fabric's own maven first: it serves the Fabric toolchain, so builds don't depend
+        // on Maven Central for those artifacts (Central sometimes rate-limits).
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+            content { includeGroupByRegex 'net\\.fabricmc.*' }
+        }
         mavenCentral()
     }
 }

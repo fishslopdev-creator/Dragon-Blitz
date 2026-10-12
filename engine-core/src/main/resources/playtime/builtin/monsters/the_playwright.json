@@ -3,9 +3,9 @@
   "displayName": "The Playwright",
   "behaviour": "hunter",
   "description": "An original toy-factory stagehand: a puppet theatre on stilt legs with a marionette-bar head. Hunts by sound, patrols its route, and follows chase waypoints.",
-  "model": "playtime:geo/monsters/the_playwright.geo.json",
+  "model": "playtime:monsters/the_playwright",
   "texture": "playtime:textures/entity/monsters/the_playwright.png",
-  "animationFile": "playtime:animations/monsters/the_playwright.animation.json",
+  "animationFile": "playtime:monsters/the_playwright",
   "animations": {
     "idle": "animation.the_playwright.idle",
     "walk": "animation.the_playwright.walk",

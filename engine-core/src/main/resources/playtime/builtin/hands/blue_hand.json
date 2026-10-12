@@ -3,7 +3,7 @@
   "displayName": "Blue Hand",
   "description": "Long-range grabbing and pulling. Can carry power along the cable between a source and a receiver.",
   "icon": "playtime:textures/gui/hands/blue_hand.png",
-  "model": "playtime:geo/hands/blue_hand.geo.json",
+  "model": "playtime:hands/blue_hand",
   "texture": "playtime:textures/entity/hands/blue_hand.png",
   "animations": {
     "fire": "animation.hand.fire",

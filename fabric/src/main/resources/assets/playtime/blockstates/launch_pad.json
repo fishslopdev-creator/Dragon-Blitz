@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "active=false,powered=false": {
+      "model": "playtime:block/launch_pad"
+    },
+    "active=false,powered=true": {
+      "model": "playtime:block/launch_pad"
+    },
+    "active=true,powered=false": {
+      "model": "playtime:block/launch_pad_on"
+    },
+    "active=true,powered=true": {
+      "model": "playtime:block/launch_pad_on"
+    }
+  }
+}

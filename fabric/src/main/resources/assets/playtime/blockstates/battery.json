@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "active=false,powered=false": {
+      "model": "playtime:block/battery"
+    },
+    "active=false,powered=true": {
+      "model": "playtime:block/battery"
+    },
+    "active=true,powered=false": {
+      "model": "playtime:block/battery_on"
+    },
+    "active=true,powered=true": {
+      "model": "playtime:block/battery_on"
+    }
+  }
+}

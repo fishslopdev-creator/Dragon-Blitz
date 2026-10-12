@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "active=false,powered=false": {
       "model": "playtime:block/timed_switch"
+    },
+    "active=false,powered=true": {
+      "model": "playtime:block/timed_switch"
+    },
+    "active=true,powered=false": {
+      "model": "playtime:block/timed_switch_on"
+    },
+    "active=true,powered=true": {
+      "model": "playtime:block/timed_switch_on"
     }
   }
 }

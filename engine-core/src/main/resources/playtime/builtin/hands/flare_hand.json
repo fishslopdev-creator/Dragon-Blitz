@@ -3,7 +3,7 @@
   "displayName": "Flare Hand",
   "description": "Fires flares that light up dark areas and scare off creatures that fear light.",
   "icon": "playtime:textures/gui/hands/flare_hand.png",
-  "model": "playtime:geo/hands/flare_hand.geo.json",
+  "model": "playtime:hands/flare_hand",
   "texture": "playtime:textures/entity/hands/flare_hand.png",
   "animations": {
     "fire": "animation.hand.fire",

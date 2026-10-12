@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "active=false,powered=false": {
+      "model": "playtime:block/part_socket"
+    },
+    "active=false,powered=true": {
+      "model": "playtime:block/part_socket"
+    },
+    "active=true,powered=false": {
+      "model": "playtime:block/part_socket_on"
+    },
+    "active=true,powered=true": {
+      "model": "playtime:block/part_socket_on"
+    }
+  }
+}

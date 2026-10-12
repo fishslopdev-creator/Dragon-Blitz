@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "active=false,powered=false": {
+      "model": "playtime:block/attach_point"
+    },
+    "active=false,powered=true": {
+      "model": "playtime:block/attach_point"
+    },
+    "active=true,powered=false": {
+      "model": "playtime:block/attach_point_on"
+    },
+    "active=true,powered=true": {
+      "model": "playtime:block/attach_point_on"
+    }
+  }
+}

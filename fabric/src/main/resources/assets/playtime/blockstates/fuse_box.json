@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "active=false,powered=false": {
       "model": "playtime:block/fuse_box"
+    },
+    "active=false,powered=true": {
+      "model": "playtime:block/fuse_box"
+    },
+    "active=true,powered=false": {
+      "model": "playtime:block/fuse_box_on"
+    },
+    "active=true,powered=true": {
+      "model": "playtime:block/fuse_box_on"
     }
   }
 }

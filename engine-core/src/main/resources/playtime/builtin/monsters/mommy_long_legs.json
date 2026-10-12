@@ -3,9 +3,9 @@
   "displayName": "Mommy Long Legs",
   "behaviour": "crawler",
   "description": "Configurable encounter definition (Chapter 2). Original model and textures.",
-  "model": "playtime:geo/monsters/mommy_long_legs.geo.json",
+  "model": "playtime:monsters/mommy_long_legs",
   "texture": "playtime:textures/entity/monsters/mommy_long_legs.png",
-  "animationFile": "playtime:animations/monsters/mommy_long_legs.animation.json",
+  "animationFile": "playtime:monsters/mommy_long_legs",
   "animations": {
     "idle": "animation.mommy_long_legs.idle",
     "walk": "animation.mommy_long_legs.walk",

@@ -3,7 +3,7 @@
   "displayName": "Pressure Hand",
   "description": "Attach, hold to charge, then release a pressurised blast that pushes objects and breaks weak vents, glass and ice.",
   "icon": "playtime:textures/gui/hands/pressure_hand.png",
-  "model": "playtime:geo/hands/pressure_hand.geo.json",
+  "model": "playtime:hands/pressure_hand",
   "texture": "playtime:textures/entity/hands/pressure_hand.png",
   "animations": {
     "fire": "animation.hand.fire",

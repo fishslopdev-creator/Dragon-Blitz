@@ -1,0 +1,13 @@
+{
+  "values": [
+    "#minecraft:impermeable",
+    "minecraft:glass_pane",
+    "minecraft:ice",
+    "minecraft:packed_ice",
+    "minecraft:iron_bars",
+    "minecraft:copper_grate",
+    "minecraft:exposed_copper_grate",
+    "minecraft:weathered_copper_grate",
+    "minecraft:oxidized_copper_grate"
+  ]
+}

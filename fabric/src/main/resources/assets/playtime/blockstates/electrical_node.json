@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "active=false,powered=false": {
       "model": "playtime:block/electrical_node"
+    },
+    "active=false,powered=true": {
+      "model": "playtime:block/electrical_node"
+    },
+    "active=true,powered=false": {
+      "model": "playtime:block/electrical_node_on"
+    },
+    "active=true,powered=true": {
+      "model": "playtime:block/electrical_node_on"
     }
   }
 }

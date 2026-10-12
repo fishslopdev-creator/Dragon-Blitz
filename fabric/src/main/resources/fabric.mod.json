@@ -4,14 +4,27 @@
   "version": "${version}",
   "name": "Playtime Engine",
   "description": "A toy-factory horror game engine: GrabPack hands, puzzles, doors, monsters, chases and story tools that map makers configure per world.",
-  "authors": ["Playtime Engine contributors"],
+  "authors": [
+    "Playtime Engine contributors"
+  ],
   "icon": "assets/playtime/textures/gui/hands/pulse_hand.png",
   "environment": "*",
-  "entrypoints": {},
+  "entrypoints": {
+    "main": [
+      "dev.playtime.fabric.PlaytimeMod"
+    ],
+    "client": [
+      "dev.playtime.fabric.client.PlaytimeClient"
+    ]
+  },
   "depends": {
-    "fabricloader": ">=0.18.1",
+    "fabricloader": ">=0.19.5",
     "minecraft": "~1.21.11",
     "java": ">=21",
-    "fabric-api": "*"
-  }
+    "fabric-api": "*",
+    "geckolib": ">=5.4"
+  },
+  "mixins": [
+    "playtime.mixins.json"
+  ]
 }

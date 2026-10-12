@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "playtime:block/connection_device"
+    "layer0": "playtime:item/connection_device"
   }
 }

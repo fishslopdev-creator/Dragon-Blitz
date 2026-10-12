@@ -3,7 +3,7 @@
   "displayName": "Conductive Hand",
   "description": "A live power conduit: hold a source and keep the circuit alive while you move between nodes.",
   "icon": "playtime:textures/gui/hands/conductive_hand.png",
-  "model": "playtime:geo/hands/conductive_hand.geo.json",
+  "model": "playtime:hands/conductive_hand",
   "texture": "playtime:textures/entity/hands/conductive_hand.png",
   "animations": {
     "fire": "animation.hand.fire",

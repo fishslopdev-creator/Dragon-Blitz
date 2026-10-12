@@ -3,9 +3,9 @@
   "displayName": "Wrongside Outimal",
   "behaviour": "swarm",
   "description": "Configurable encounter definition (Chapter 5). Original model and textures.",
-  "model": "playtime:geo/monsters/wrongside_outimal.geo.json",
+  "model": "playtime:monsters/wrongside_outimal",
   "texture": "playtime:textures/entity/monsters/wrongside_outimal.png",
-  "animationFile": "playtime:animations/monsters/wrongside_outimal.animation.json",
+  "animationFile": "playtime:monsters/wrongside_outimal",
   "animations": {
     "idle": "animation.wrongside_outimal.idle",
     "walk": "animation.wrongside_outimal.walk",

@@ -199,8 +199,8 @@ def grabpack():
     return m
 
 
-def write_model(model, tex_rel):
-    with open(out("geo", model.name + ".geo.json"), "w") as fh:
+def write_model(model, tex_rel, folder=""):
+    with open(out("geckolib", "models", *( [folder] if folder else [] ), model.name + ".geo.json"), "w") as fh:
         json.dump(model.geometry(), fh, indent=1)
     model.texture().save(out("textures", *tex_rel))
 
@@ -362,33 +362,117 @@ def wheel():
     img.save(out("textures", "gui", "hand_wheel.png"))
 
 
+BLOCKS = {
+    # name: (base colour, accent colour, display name)
+    "player_setup_console": ((60, 70, 90), (230, 160, 40), "Player Setup Console"),
+    "door_controller": ((70, 70, 76), (200, 60, 60), "Door Controller"),
+    "keycard_reader": ((50, 54, 60), (47, 107, 219), "Keycard Reader"),
+    "hand_scanner": ((50, 54, 60), (53, 180, 74), "Hand Scanner"),
+    "access_terminal": ((30, 40, 50), (80, 240, 120), "Access-Control Terminal"),
+    "security_terminal": ((40, 30, 50), (240, 80, 120), "Security Terminal"),
+    "power_generator": ((90, 80, 50), (240, 200, 60), "Power Generator"),
+    "fuse_box": ((80, 84, 90), (220, 180, 40), "Fuse Box"),
+    "electrical_node": ((60, 60, 66), (120, 200, 255), "Electrical Node"),
+    "power_switch": ((70, 70, 70), (255, 220, 80), "Power Switch"),
+    "power_receiver": ((60, 66, 70), (255, 240, 140), "Power Receiver"),
+    "charging_station": ((50, 70, 60), (120, 255, 160), "Charging Station"),
+    "battery": ((60, 60, 50), (200, 230, 90), "Battery"),
+    "circuit_endpoint": ((60, 50, 40), (255, 170, 80), "Circuit Endpoint"),
+    "pulse_receiver": ((40, 60, 60), (25, 230, 193), "Pulse Receiver"),
+    "timed_switch": ((70, 66, 60), (240, 140, 40), "Timed Switch"),
+    "factory_button": ((80, 40, 40), (255, 90, 90), "Factory Button"),
+    "factory_lever": ((70, 60, 50), (220, 200, 160), "Factory Lever"),
+    "machine": ((70, 74, 80), (180, 190, 200), "Machine"),
+    "part_socket": ((66, 66, 72), (200, 160, 120), "Part Socket"),
+    "alarm": ((90, 30, 30), (255, 60, 40), "Alarm"),
+    "launch_pad": ((70, 40, 90), (180, 100, 255), "Launch Pad"),
+    "attach_point": ((60, 60, 60), (240, 200, 60), "Attach Point"),
+    "hand_pickup": ((40, 40, 50), (200, 200, 255), "Hand Pickup"),
+    "puzzle_controller": ((70, 50, 90), (200, 120, 255), "Puzzle Controller"),
+    "chase_trigger": ((90, 30, 30), (255, 80, 80), "Chase Trigger"),
+    "checkpoint": ((40, 80, 50), (120, 240, 140), "Checkpoint Block"),
+    "monster_spawn_marker": ((60, 20, 60), (240, 60, 240), "Monster Spawn Marker"),
+    "monster_route_marker": ((60, 40, 20), (255, 170, 60), "Monster Route Marker"),
+    "story_event_trigger": ((30, 50, 90), (120, 170, 255), "Story Event Trigger"),
+    "objective_trigger": ((30, 70, 70), (100, 240, 230), "Objective Trigger"),
+    "chapter_transition": ((90, 80, 30), (255, 230, 120), "Chapter Transition Block"),
+    "logic_gate": ((50, 50, 60), (160, 160, 255), "Logic Gate"),
+    "timer": ((60, 50, 50), (255, 200, 200), "Timer"),
+    "trigger_volume": ((40, 40, 40), (200, 200, 200), "Invisible Trigger Volume"),
+}
+ITEMS = {
+    "connection_device": ((230, 200, 120), "Connection Device"), "power_core": ((25, 230, 193), "Power Core"),
+    "fuse": ((220, 180, 40), "Fuse"), "gear": ((170, 170, 180), "Gear"), "drive_belt": ((60, 60, 60), "Drive Belt"),
+    "blue_access_card": ((47, 107, 219), "Blue Access Card"), "red_access_card": ((211, 49, 43), "Red Access Card"),
+    "high_security_card": ((30, 30, 30), "High Security Access Card"),
+    "maintenance_key": ((176, 141, 60), "Maintenance Key"), "laboratory_key": ((154, 208, 216), "Laboratory Key"),
+}
+
+
+def write_json(rel, obj):
+    with open(out(*rel.split("/")), "w") as fh:
+        json.dump(obj, fh, indent=2)
+        fh.write("\n")
+
+
+def device_texture(base, accent, lit):
+    img = Image.new("RGB", (16, 16), base)
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], outline=tuple(max(0, c - 25) for c in base))
+    glow = tuple(min(255, c + 60) for c in accent) if lit else tuple(c // 2 for c in accent)
+    d.rectangle([4, 4, 11, 11], outline=accent)
+    d.rectangle([6, 6, 9, 9], fill=glow)
+    if lit:
+        for x, y in ((2, 2), (13, 2), (2, 13), (13, 13)):
+            img.putpixel((x, y), glow)
+    rnd = random.Random(sum(base) * 31 + sum(accent))
+    for _ in range(12):
+        x, y = rnd.randrange(16), rnd.randrange(16)
+        px = img.getpixel((x, y))
+        img.putpixel((x, y), tuple(max(0, min(255, c + rnd.randint(-12, 12))) for c in px))
+    return img
+
+
 def block_textures():
-    specs = {
-        "player_setup_console": ((60, 70, 90), (230, 160, 40)), "door_controller": ((70, 70, 76), (200, 60, 60)),
-        "keycard_reader": ((50, 54, 60), (47, 107, 219)), "hand_scanner": ((50, 54, 60), (53, 180, 74)),
-        "power_generator": ((90, 80, 50), (240, 200, 60)), "fuse_box": ((80, 84, 90), (220, 180, 40)),
-        "electrical_node": ((60, 60, 66), (120, 200, 255)), "timed_switch": ((70, 66, 60), (240, 140, 40)),
-        "puzzle_controller": ((70, 50, 90), (200, 120, 255)), "chase_trigger": ((90, 30, 30), (255, 80, 80)),
-        "checkpoint": ((40, 80, 50), (120, 240, 140)), "monster_spawn_marker": ((60, 20, 60), (240, 60, 240)),
-        "monster_route_marker": ((60, 40, 20), (255, 170, 60)), "story_event_trigger": ((30, 50, 90), (120, 170, 255)),
-        "objective_trigger": ((30, 70, 70), (100, 240, 230)), "chapter_transition": ((90, 80, 30), (255, 230, 120)),
-        "trigger_volume": ((40, 40, 40), (200, 200, 200)), "access_terminal": ((30, 40, 50), (80, 240, 120)),
-        "pulse_receiver": ((40, 60, 60), (25, 230, 193)), "connection_device": ((60, 60, 70), (230, 200, 120)),
-    }
-    for name, (base, accent) in specs.items():
-        img = Image.new("RGB", (16, 16), base)
+    lang = {}
+    for name, (base, accent, display) in BLOCKS.items():
+        device_texture(base, accent, False).save(out("textures", "block", name + ".png"))
+        device_texture(base, accent, True).save(out("textures", "block", name + "_on.png"))
+        write_json(f"models/block/{name}.json", {"parent": "minecraft:block/cube_all", "textures": {"all": f"playtime:block/{name}"}})
+        write_json(f"models/block/{name}_on.json", {"parent": "minecraft:block/cube_all", "textures": {"all": f"playtime:block/{name}_on"}})
+        variants = {}
+        for active in ("false", "true"):
+            for powered in ("false", "true"):
+                variants[f"active={active},powered={powered}"] = {"model": f"playtime:block/{name}{'_on' if active == 'true' else ''}"}
+        write_json(f"blockstates/{name}.json", {"variants": variants})
+        write_json(f"items/{name}.json", {"model": {"type": "minecraft:model", "model": f"playtime:block/{name}"}})
+        lang[f"block.playtime.{name}"] = display
+    # Factory door and light.
+    door = Image.new("RGB", (16, 16), (88, 92, 98))
+    dd = ImageDraw.Draw(door)
+    for y in range(0, 16, 4):
+        dd.line([(0, y), (15, y)], fill=(70, 74, 80))
+    dd.rectangle([0, 0, 15, 15], outline=(60, 62, 66))
+    for x in (3, 12):
+        dd.line([(x, 0), (x, 15)], fill=(230, 180, 40))
+    door.save(out("textures", "block", "factory_door.png"))
+    write_json("models/block/factory_door.json", {"parent": "minecraft:block/cube_all", "textures": {"all": "playtime:block/factory_door"}})
+    write_json("blockstates/factory_door.json", {"variants": {"": {"model": "playtime:block/factory_door"}}})
+    write_json("items/factory_door.json", {"model": {"type": "minecraft:model", "model": "playtime:block/factory_door"}})
+    for lit in (False, True):
+        img = Image.new("RGB", (16, 16), (40, 40, 44))
         d = ImageDraw.Draw(img)
-        d.rectangle([0, 0, 15, 15], outline=tuple(max(0, c - 25) for c in base))
-        d.rectangle([4, 4, 11, 11], outline=accent)
-        d.rectangle([6, 6, 9, 9], fill=accent)
-        for _ in range(12):
-            x, y = random.randrange(16), random.randrange(16)
-            px = img.getpixel((x, y))
-            img.putpixel((x, y), tuple(max(0, min(255, c + random.randint(-12, 12))) for c in px))
-        img.save(out("textures", "block", name + ".png"))
-    for item, col in (("power_core", (25, 230, 193)), ("fuse", (220, 180, 40)), ("blue_access_card", (47, 107, 219)),
-                      ("red_access_card", (211, 49, 43)), ("high_security_card", (30, 30, 30)),
-                      ("maintenance_key", (176, 141, 60)), ("laboratory_key", (154, 208, 216))):
+        d.rectangle([2, 2, 13, 13], fill=(255, 236, 190) if lit else (70, 68, 64))
+        d.rectangle([2, 2, 13, 13], outline=(30, 30, 32))
+        img.save(out("textures", "block", "factory_light" + ("_on" if lit else "") + ".png"))
+    write_json("models/block/factory_light.json", {"parent": "minecraft:block/cube_all", "textures": {"all": "playtime:block/factory_light"}})
+    write_json("models/block/factory_light_on.json", {"parent": "minecraft:block/cube_all", "textures": {"all": "playtime:block/factory_light_on"}})
+    write_json("blockstates/factory_light.json", {"variants": {"lit=false": {"model": "playtime:block/factory_light"},
+                                                            "lit=true": {"model": "playtime:block/factory_light_on"}}})
+    write_json("items/factory_light.json", {"model": {"type": "minecraft:model", "model": "playtime:block/factory_light_on"}})
+    lang["block.playtime.factory_door"] = "Factory Door"
+    lang["block.playtime.factory_light"] = "Factory Light"
+    for item, (col, display) in ITEMS.items():
         img = Image.new("RGBA", (16, 16), (0, 0, 0, 0))
         d = ImageDraw.Draw(img)
         if "card" in item:
@@ -398,10 +482,24 @@ def block_textures():
             d.ellipse([2, 5, 7, 10], outline=col, width=2)
             d.line([(7, 8), (14, 8)], fill=col, width=2)
             d.line([(12, 8), (12, 11)], fill=col)
+        elif item == "gear":
+            d.ellipse([3, 3, 12, 12], outline=col, width=3)
+            for x, y in ((7, 1), (7, 13), (1, 7), (13, 7)):
+                d.rectangle([x, y, x + 1, y + 1], fill=col)
+        elif item == "drive_belt":
+            d.ellipse([2, 4, 13, 11], outline=col, width=2)
+        elif item == "connection_device":
+            d.rectangle([5, 2, 10, 13], fill=(70, 70, 80), outline=col)
+            d.line([(7, 0), (7, 2)], fill=col)
+            d.rectangle([6, 4, 9, 6], fill=(120, 255, 160))
         else:
             d.rectangle([4, 2, 11, 13], fill=(60, 60, 66), outline=col)
             d.rectangle([6, 5, 9, 10], fill=col)
         img.save(out("textures", "item", item + ".png"))
+        write_json(f"models/item/{item}.json", {"parent": "minecraft:item/generated", "textures": {"layer0": f"playtime:item/{item}"}})
+        write_json(f"items/{item}.json", {"model": {"type": "minecraft:model", "model": f"playtime:item/{item}"}})
+        lang[f"item.playtime.{item}"] = display
+    return lang
 
 
 # --------------------------------------------------------------------------- sounds
@@ -456,34 +554,49 @@ def sounds():
         json.dump(sounds_json, fh, indent=2)
 
 
+def update_lang(entries):
+    path = out("lang", "en_us.json")
+    try:
+        with open(path) as fh:
+            lang = json.load(fh)
+    except (OSError, ValueError):
+        lang = {}
+    lang.update(entries)
+    lang["entity.playtime.monster"] = "Playtime Monster"
+    with open(path, "w") as fh:
+        json.dump(dict(sorted(lang.items())), fh, indent=2)
+        fh.write("\n")
+
+
 def main():
     pw = playwright()
-    write_model(pw, ("entity", "monsters", "the_playwright.png"))
-    with open(out("animations", "monsters", "the_playwright.animation.json"), "w") as fh:
+    write_model(pw, ("entity", "monsters", "the_playwright.png"), "monsters")
+    with open(out("geckolib", "animations", "monsters", "the_playwright.animation.json"), "w") as fh:
         json.dump(playwright_animations(), fh, indent=1)
     ph = pulse_hand()
-    os.makedirs(os.path.join(ASSETS, "geo", "hands"), exist_ok=True)
-    with open(out("geo", "hands", "pulse_hand.geo.json"), "w") as fh:
+    os.makedirs(os.path.join(ASSETS, "geckolib", "models", "hands"), exist_ok=True)
+    with open(out("geckolib", "models", "hands", "pulse_hand.geo.json"), "w") as fh:
         json.dump(ph.geometry(), fh, indent=1)
     ph.texture().save(out("textures", "entity", "hands", "pulse_hand.png"))
-    with open(out("animations", "hands", "pulse_hand.animation.json"), "w") as fh:
+    with open(out("geckolib", "animations", "hands", "pulse_hand.animation.json"), "w") as fh:
         json.dump(pulse_hand_animations(), fh, indent=1)
-    with open(out("animations", "hands", "hand.animation.json"), "w") as fh:
+    with open(out("geckolib", "animations", "hands", "hand.animation.json"), "w") as fh:
         json.dump(generic_hand_animations(), fh, indent=1)
     for name, rgb in HANDS.items():
         icon(name, rgb)
         if name == "pulse_hand":
             continue
         m = hand_texture_variant(name, rgb)
-        with open(out("geo", "hands", name + ".geo.json"), "w") as fh:
+        with open(out("geckolib", "models", "hands", name + ".geo.json"), "w") as fh:
             json.dump(m.geometry(), fh, indent=1)
         m.texture().save(out("textures", "entity", "hands", name + ".png"))
     gp = grabpack()
     write_model(gp, ("entity", "grabpack_2.png"))
     menu_background()
     wheel()
-    block_textures()
+    block_lang = block_textures()
     sounds()
+    update_lang(block_lang)
     print("assets written to", os.path.normpath(ASSETS))
 
 

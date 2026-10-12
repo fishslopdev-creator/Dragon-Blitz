@@ -3,7 +3,7 @@
   "displayName": "Omni-Hand",
   "description": "An upgraded Red Hand that holds several charges and opens red scanners and security systems.",
   "icon": "playtime:textures/gui/hands/omni_hand.png",
-  "model": "playtime:geo/hands/omni_hand.geo.json",
+  "model": "playtime:hands/omni_hand",
   "texture": "playtime:textures/entity/hands/omni_hand.png",
   "animations": {
     "fire": "animation.hand.fire",

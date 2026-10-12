@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "active=false,powered=false": {
       "model": "playtime:block/power_generator"
+    },
+    "active=false,powered=true": {
+      "model": "playtime:block/power_generator"
+    },
+    "active=true,powered=false": {
+      "model": "playtime:block/power_generator_on"
+    },
+    "active=true,powered=true": {
+      "model": "playtime:block/power_generator_on"
     }
   }
 }

@@ -3,9 +3,9 @@
   "displayName": "Lily Lovebraids",
   "behaviour": "stalker",
   "description": "Configurable encounter definition (Chapter 5). Original model and textures.",
-  "model": "playtime:geo/monsters/lily_lovebraids.geo.json",
+  "model": "playtime:monsters/lily_lovebraids",
   "texture": "playtime:textures/entity/monsters/lily_lovebraids.png",
-  "animationFile": "playtime:animations/monsters/lily_lovebraids.animation.json",
+  "animationFile": "playtime:monsters/lily_lovebraids",
   "animations": {
     "idle": "animation.lily_lovebraids.idle",
     "walk": "animation.lily_lovebraids.walk",

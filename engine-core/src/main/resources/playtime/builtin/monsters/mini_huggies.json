@@ -3,9 +3,9 @@
   "displayName": "Mini Huggies",
   "behaviour": "swarm",
   "description": "Configurable encounter definition (Chapter 2). Original model and textures.",
-  "model": "playtime:geo/monsters/mini_huggies.geo.json",
+  "model": "playtime:monsters/mini_huggies",
   "texture": "playtime:textures/entity/monsters/mini_huggies.png",
-  "animationFile": "playtime:animations/monsters/mini_huggies.animation.json",
+  "animationFile": "playtime:monsters/mini_huggies",
   "animations": {
     "idle": "animation.mini_huggies.idle",
     "walk": "animation.mini_huggies.walk",

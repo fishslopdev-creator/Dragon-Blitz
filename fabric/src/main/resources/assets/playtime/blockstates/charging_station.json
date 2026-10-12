@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "active=false,powered=false": {
+      "model": "playtime:block/charging_station"
+    },
+    "active=false,powered=true": {
+      "model": "playtime:block/charging_station"
+    },
+    "active=true,powered=false": {
+      "model": "playtime:block/charging_station_on"
+    },
+    "active=true,powered=true": {
+      "model": "playtime:block/charging_station_on"
+    }
+  }
+}

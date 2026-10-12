@@ -3,9 +3,9 @@
   "displayName": "Huggy Wuggy (returning)",
   "behaviour": "hunter",
   "description": "Configurable encounter definition (Chapter 5). Original model and textures.",
-  "model": "playtime:geo/monsters/huggy_wuggy_returning.geo.json",
+  "model": "playtime:monsters/huggy_wuggy_returning",
   "texture": "playtime:textures/entity/monsters/huggy_wuggy_returning.png",
-  "animationFile": "playtime:animations/monsters/huggy_wuggy_returning.animation.json",
+  "animationFile": "playtime:monsters/huggy_wuggy_returning",
   "animations": {
     "idle": "animation.huggy_wuggy_returning.idle",
     "walk": "animation.huggy_wuggy_returning.walk",

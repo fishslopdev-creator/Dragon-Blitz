@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "playtime:block/factory_light"
+    },
+    "lit=true": {
+      "model": "playtime:block/factory_light_on"
+    }
+  }
+}

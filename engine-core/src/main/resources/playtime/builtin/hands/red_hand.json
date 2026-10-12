@@ -3,7 +3,7 @@
   "displayName": "Red Hand",
   "description": "General-purpose grabbing and interaction. Works red hand scanners and carries power.",
   "icon": "playtime:textures/gui/hands/red_hand.png",
-  "model": "playtime:geo/hands/red_hand.geo.json",
+  "model": "playtime:hands/red_hand",
   "texture": "playtime:textures/entity/hands/red_hand.png",
   "animations": {
     "fire": "animation.hand.fire",

@@ -3,9 +3,9 @@
   "displayName": "The Prototype",
   "behaviour": "boss",
   "description": "Configurable encounter definition (Chapter 5). Original model and textures.",
-  "model": "playtime:geo/monsters/the_prototype.geo.json",
+  "model": "playtime:monsters/the_prototype",
   "texture": "playtime:textures/entity/monsters/the_prototype.png",
-  "animationFile": "playtime:animations/monsters/the_prototype.animation.json",
+  "animationFile": "playtime:monsters/the_prototype",
   "animations": {
     "idle": "animation.the_prototype.idle",
     "walk": "animation.the_prototype.walk",

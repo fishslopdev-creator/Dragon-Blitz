@@ -3,9 +3,9 @@
   "displayName": "Poppy",
   "behaviour": "npc",
   "description": "Configurable encounter definition (optional NPC). Original model and textures.",
-  "model": "playtime:geo/monsters/poppy.geo.json",
+  "model": "playtime:monsters/poppy",
   "texture": "playtime:textures/entity/monsters/poppy.png",
-  "animationFile": "playtime:animations/monsters/poppy.animation.json",
+  "animationFile": "playtime:monsters/poppy",
   "animations": {
     "idle": "animation.poppy.idle",
     "walk": "animation.poppy.walk",

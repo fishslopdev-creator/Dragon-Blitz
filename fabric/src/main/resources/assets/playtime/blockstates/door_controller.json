@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "active=false,powered=false": {
       "model": "playtime:block/door_controller"
+    },
+    "active=false,powered=true": {
+      "model": "playtime:block/door_controller"
+    },
+    "active=true,powered=false": {
+      "model": "playtime:block/door_controller_on"
+    },
+    "active=true,powered=true": {
+      "model": "playtime:block/door_controller_on"
     }
   }
 }

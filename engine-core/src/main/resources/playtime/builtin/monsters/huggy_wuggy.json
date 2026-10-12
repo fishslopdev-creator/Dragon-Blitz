@@ -3,9 +3,9 @@
   "displayName": "Huggy Wuggy",
   "behaviour": "stalker",
   "description": "Configurable encounter definition (Chapter 1). Original model and textures.",
-  "model": "playtime:geo/monsters/huggy_wuggy.geo.json",
+  "model": "playtime:monsters/huggy_wuggy",
   "texture": "playtime:textures/entity/monsters/huggy_wuggy.png",
-  "animationFile": "playtime:animations/monsters/huggy_wuggy.animation.json",
+  "animationFile": "playtime:monsters/huggy_wuggy",
   "animations": {
     "idle": "animation.huggy_wuggy.idle",
     "walk": "animation.huggy_wuggy.walk",

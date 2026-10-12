@@ -3,9 +3,9 @@
   "displayName": "PJ Pug-a-Pillar",
   "behaviour": "scripted",
   "description": "Configurable encounter definition (Chapter 2). Original model and textures.",
-  "model": "playtime:geo/monsters/pj_pug_a_pillar.geo.json",
+  "model": "playtime:monsters/pj_pug_a_pillar",
   "texture": "playtime:textures/entity/monsters/pj_pug_a_pillar.png",
-  "animationFile": "playtime:animations/monsters/pj_pug_a_pillar.animation.json",
+  "animationFile": "playtime:monsters/pj_pug_a_pillar",
   "animations": {
     "idle": "animation.pj_pug_a_pillar.idle",
     "walk": "animation.pj_pug_a_pillar.walk",

@@ -3,9 +3,9 @@
   "displayName": "CatNap",
   "behaviour": "stealth",
   "description": "Configurable encounter definition (Chapter 3). Original model and textures.",
-  "model": "playtime:geo/monsters/catnap.geo.json",
+  "model": "playtime:monsters/catnap",
   "texture": "playtime:textures/entity/monsters/catnap.png",
-  "animationFile": "playtime:animations/monsters/catnap.animation.json",
+  "animationFile": "playtime:monsters/catnap",
   "animations": {
     "idle": "animation.catnap.idle",
     "walk": "animation.catnap.walk",

@@ -3,9 +3,9 @@
   "displayName": "Giblet",
   "behaviour": "npc",
   "description": "Configurable encounter definition (optional NPC). Original model and textures.",
-  "model": "playtime:geo/monsters/giblet.geo.json",
+  "model": "playtime:monsters/giblet",
   "texture": "playtime:textures/entity/monsters/giblet.png",
-  "animationFile": "playtime:animations/monsters/giblet.animation.json",
+  "animationFile": "playtime:monsters/giblet",
   "animations": {
     "idle": "animation.giblet.idle",
     "walk": "animation.giblet.walk",

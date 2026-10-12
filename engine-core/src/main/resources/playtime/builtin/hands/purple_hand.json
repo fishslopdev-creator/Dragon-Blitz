@@ -3,7 +3,7 @@
   "displayName": "Purple Hand",
   "description": "Activates purple jump pads to launch you upwards.",
   "icon": "playtime:textures/gui/hands/purple_hand.png",
-  "model": "playtime:geo/hands/purple_hand.geo.json",
+  "model": "playtime:hands/purple_hand",
   "texture": "playtime:textures/entity/hands/purple_hand.png",
   "animations": {
     "fire": "animation.hand.fire",
