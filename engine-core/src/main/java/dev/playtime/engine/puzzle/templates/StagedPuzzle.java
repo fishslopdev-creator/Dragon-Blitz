@@ -28,7 +28,8 @@ import java.util.Set;
  *     ...
  *   ]
  * }</pre>
- * A failed stage restarts itself unless {@code failsPuzzle} is true.
+ * A failed stage restarts itself (switching its devices back off unless {@code resetDevices}
+ * is false) unless {@code failsPuzzle} is true.
  */
 public final class StagedPuzzle implements PuzzleLogic {
     public static final Id ID = Id.of("staged");
@@ -144,6 +145,10 @@ public final class StagedPuzzle implements PuzzleLogic {
             if (PuzzleRun.bool(stage, "failsPuzzle", false)) return Outcome.FAILURE;
             run.ctx().run(actions(stage, "onFail"), null);
             sub(run, stage, index).clearData();
+            if (PuzzleRun.bool(stage, "resetDevices", true)) {
+                PuzzleLogic logic = logic(stage);
+                if (logic != null) for (Id device : logic.devices(settings(stage))) run.ctx().setDeviceActive(device, false);
+            }
             enter(run, index);
         }
         return Outcome.CONTINUE;
