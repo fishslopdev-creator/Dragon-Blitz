@@ -37,4 +37,31 @@ class JsonTest {
         assertNotNull(c.mainMenu.buttons);
         assertFalse(c.mainMenu.orderedVisibleButtons().isEmpty());
     }
+
+    @Test
+    void coloursAcceptHexAndNumbersFromTextAndTrees() {
+        String text = "{\"color\":\"#2F6BDB\"}";
+        var fromText = Json.fromJson(text, dev.playtime.engine.hand.HandDefinition.class);
+        var fromTree = Json.fromJson(Json.parse(text), dev.playtime.engine.hand.HandDefinition.class);
+        assertEquals(0xFF2F6BDB, fromText.color);
+        assertEquals(0xFF2F6BDB, fromTree.color);
+        assertEquals(0xFF2F6BDB, Json.fromJson("{\"color\":4281297883}", dev.playtime.engine.hand.HandDefinition.class).color);
+        assertTrue(Json.toJson(fromText).contains("\"#FF2F6BDB\""));
+        assertThrows(RuntimeException.class, () -> Json.fromJson("{\"color\":\"blue\"}", dev.playtime.engine.hand.HandDefinition.class));
+    }
+
+    @Test
+    void everyBuiltinFileParsesFromText() throws Exception {
+        var dir = java.nio.file.Path.of("src/main/resources/playtime");
+        try (var walk = java.nio.file.Files.walk(dir)) {
+            for (var p : walk.filter(f -> f.toString().endsWith(".json")).toList()) {
+                String rel = dir.relativize(p).toString().replace('\\', '/');
+                String[] parts = rel.split("/");
+                var kind = parts.length > 2 ? dev.playtime.engine.content.ContentKind.byFolder(parts[parts.length > 3 && parts[1].equals("content") ? 2 : 1]) : null;
+                if (kind == null) continue;
+                // Text parsing is stricter than tree parsing (e.g. int overflow), so check both.
+                assertNotNull(Json.fromJson(java.nio.file.Files.readString(p), kind.type), rel);
+            }
+        }
+    }
 }

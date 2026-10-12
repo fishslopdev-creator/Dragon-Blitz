@@ -2,6 +2,8 @@ package dev.playtime.engine.hand;
 
 import dev.playtime.engine.grabpack.CableSettings;
 import dev.playtime.engine.grabpack.TargetKind;
+import com.google.gson.annotations.JsonAdapter;
+import dev.playtime.engine.util.ColorAdapter;
 import dev.playtime.engine.util.Id;
 
 import java.util.ArrayList;
@@ -31,6 +33,7 @@ public class HandDefinition {
     /** Particle/effect keys such as {@code pulse}, {@code flare_trail}. */
     public Map<String, Id> effects = new LinkedHashMap<>();
     /** ARGB colour for the wheel and cable tint. */
+    @JsonAdapter(ColorAdapter.class)
     public int color = 0xFF3A6FE0;
     public LauncherSide launcher = LauncherSide.RIGHT;
     /** GrabPack versions that can mount this hand; empty means all. */

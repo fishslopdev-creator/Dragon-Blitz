@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "playtime:block/monster_spawn_marker"
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "pulse_hand.fire": {
+    "sounds": [
+      "playtime:pulse_hand/fire"
+    ]
+  },
+  "pulse_hand.pulse": {
+    "sounds": [
+      "playtime:pulse_hand/pulse"
+    ]
+  },
+  "pulse_hand.attach": {
+    "sounds": [
+      "playtime:pulse_hand/attach"
+    ]
+  },
+  "grabpack.fire": {
+    "sounds": [
+      "playtime:grabpack/fire"
+    ]
+  },
+  "grabpack.attach": {
+    "sounds": [
+      "playtime:grabpack/attach"
+    ]
+  },
+  "grabpack.retract": {
+    "sounds": [
+      "playtime:grabpack/retract"
+    ]
+  },
+  "hand.pickup": {
+    "sounds": [
+      "playtime:hand/pickup"
+    ]
+  },
+  "alarm": {
+    "sounds": [
+      {
+        "name": "playtime:alarm",
+        "stream": false
+      }
+    ]
+  },
+  "menu.factory_hum": {
+    "sounds": [
+      {
+        "name": "playtime:menu/factory_hum",
+        "stream": true
+      }
+    ]
+  },
+  "door.open": {
+    "sounds": [
+      "playtime:door/open"
+    ]
+  },
+  "door.close": {
+    "sounds": [
+      "playtime:door/close"
+    ]
+  },
+  "door.denied": {
+    "sounds": [
+      "playtime:door/denied"
+    ]
+  },
+  "puzzle.complete": {
+    "sounds": [
+      "playtime:puzzle/complete"
+    ]
+  },
+  "puzzle.fail": {
+    "sounds": [
+      "playtime:puzzle/fail"
+    ]
+  },
+  "scanner.accept": {
+    "sounds": [
+      "playtime:scanner/accept"
+    ]
+  },
+  "scanner.deny": {
+    "sounds": [
+      "playtime:scanner/deny"
+    ]
+  },
+  "reader.accept": {
+    "sounds": [
+      "playtime:reader/accept"
+    ]
+  },
+  "reader.deny": {
+    "sounds": [
+      "playtime:reader/deny"
+    ]
+  },
+  "socket.insert": {
+    "sounds": [
+      "playtime:socket/insert"
+    ]
+  },
+  "generator.overload": {
+    "sounds": [
+      "playtime:generator/overload"
+    ]
+  },
+  "pulse.receiver": {
+    "sounds": [
+      "playtime:pulse/receiver"
+    ]
+  },
+  "machine.conveyor_start": {
+    "sounds": [
+      "playtime:machine/conveyor_start"
+    ]
+  },
+  "monster.the_playwright.alert": {
+    "sounds": [
+      "playtime:monster/the_playwright/alert"
+    ]
+  },
+  "monster.the_playwright.step": {
+    "sounds": [
+      "playtime:monster/the_playwright/step"
+    ]
+  },
+  "monster.the_playwright.attack": {
+    "sounds": [
+      "playtime:monster/the_playwright/attack"
+    ]
+  },
+  "monster.the_playwright.ambient": {
+    "sounds": [
+      {
+        "name": "playtime:monster/the_playwright/ambient",
+        "stream": false
+      }
+    ]
+  },
+  "tape.line_safety": {
+    "sounds": [
+      "playtime:tape/line_safety"
+    ]
+  }
+}

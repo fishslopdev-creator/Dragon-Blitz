@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "playtime:block/monster_spawn_marker"
+  }
+}

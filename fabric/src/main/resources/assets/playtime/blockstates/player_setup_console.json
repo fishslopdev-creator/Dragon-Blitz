@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "playtime:block/player_setup_console"
+    }
+  }
+}

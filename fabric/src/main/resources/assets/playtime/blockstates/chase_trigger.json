@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "playtime:block/chase_trigger"
+    }
+  }
+}

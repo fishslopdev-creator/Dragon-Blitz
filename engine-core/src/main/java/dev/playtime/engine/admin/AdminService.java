@@ -12,6 +12,7 @@ import dev.playtime.engine.progress.PlayerProgress;
 import dev.playtime.engine.progress.SaveSlot;
 import dev.playtime.engine.puzzle.PuzzleDefinition;
 import dev.playtime.engine.puzzle.PuzzleState;
+import dev.playtime.engine.sample.SampleScenario;
 import dev.playtime.engine.util.BlockRef;
 import dev.playtime.engine.util.Id;
 import dev.playtime.engine.util.Issue;
@@ -292,6 +293,16 @@ public final class AdminService {
         e.bridge().applyStartingKit(target, kit);
         e.bridge().syncPlayer(target);
         return AdminResult.ok("Applied " + profile);
+    }
+
+    /** Installs the sample game with its origin at the given block (see {@link SampleScenario}). */
+    public AdminResult installSample(UUID actor, BlockRef origin, boolean configureWorld) {
+        if (!isAdmin(actor)) return denied();
+        SampleScenario.Result r = SampleScenario.install(e, origin.dimension(), origin.x(), origin.y(), origin.z(), configureWorld);
+        List<String> lines = new ArrayList<>();
+        lines.add("Installed the sample: " + r.devices().size() + " engine blocks. Place their blocks, then run /playtime validate.");
+        for (Issue i : r.issues().all()) if (i.severity() != Issue.Severity.INFO) lines.add(i.toString());
+        return new AdminResult(!r.issues().hasErrors(), lines);
     }
 
     public AdminResult kinds(UUID actor) {

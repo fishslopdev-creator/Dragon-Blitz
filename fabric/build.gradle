@@ -1,0 +1,50 @@
+// Fabric game layer for Playtime Engine (Minecraft 1.21.11).
+//
+// NOT BUILT BY DEFAULT: enable with -PwithFabric=true on a machine that can reach
+// maven.fabricmc.net and Mojang's servers. Versions come from Fabric's 1.21.11
+// announcement (Loader 0.18.1, Loom 1.14); 1.21.11 is the last Yarn release and Fabric
+// recommends Mojang's official mappings, which this build uses. Re-check every version
+// at https://fabricmc.net/develop before the first build.
+plugins {
+    id 'fabric-loom' version "${loom_version}"
+}
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    maven { url = 'https://maven.fabricmc.net/' }
+    // GeckoLib (entity models/animations). Verify a 1.21.11 build exists before enabling below.
+    maven { url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    // modImplementation "software.bernie.geckolib:geckolib-fabric-${project.minecraft_version}:<verify version>"
+
+    // The engine is plain Java; ship it inside the mod jar.
+    implementation project(':engine-core')
+    include project(':engine-core')
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') {
+        expand 'version': project.version
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+    withSourcesJar()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 21
+}

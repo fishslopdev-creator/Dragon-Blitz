@@ -1,5 +1,7 @@
 package dev.playtime.engine.config;
 
+import com.google.gson.annotations.JsonAdapter;
+import dev.playtime.engine.util.ColorAdapter;
 import dev.playtime.engine.util.Id;
 
 import java.util.ArrayList;
@@ -28,7 +30,9 @@ public class MainMenuConfig {
     public boolean showProgressStatus = true;
     public boolean animated = true;
     /** ARGB accent colour for highlights. */
+    @JsonAdapter(ColorAdapter.class)
     public int accentColor = 0xFFE23B3B;
+    @JsonAdapter(ColorAdapter.class)
     public int textColor = 0xFFEDE6D6;
     /** Ticks before the player can dismiss the menu (stops accidental double clicks on join). */
     public int inputDelayTicks = 10;

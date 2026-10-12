@@ -19,7 +19,7 @@
     "pickup": "playtime:hand.pickup",
     "use": "playtime:pulse_hand.pulse"
   },
-  "color": 4279887553,
+  "color": "#FF19E6C1",
   "launcher": "right",
   "abilities": [
     "playtime:pulse",

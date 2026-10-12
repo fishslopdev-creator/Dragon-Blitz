@@ -31,7 +31,7 @@ class AccessEvaluatorTest {
     }
 
     static Facts facts(boolean puzzleDone) {
-        return (Facts) Proxy.newProxyInstance(Facts.class.getClassLoader(), new Class[]{Facts.class},
+        return (Facts) Proxy.newProxyInstance(Facts.class.getClassLoader(), new Class<?>[]{Facts.class},
                 (proxy, m, args) -> m.getName().equals("puzzleCompleted") && puzzleDone);
     }
 

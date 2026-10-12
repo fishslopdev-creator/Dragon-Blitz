@@ -18,7 +18,7 @@
     "retract": "playtime:grabpack.retract",
     "pickup": "playtime:hand.pickup"
   },
-  "color": 4292030763,
+  "color": "#FFD3312B",
   "launcher": "right",
   "abilities": [
     "playtime:grab",
