@@ -8,3 +8,25 @@ subprojects {
         mavenCentral()
     }
 }
+
+// Preview mod jar: a valid Fabric 1.21.11 jar holding the engine, assets and sounds,
+// built without Loom (no Minecraft download needed). It has no entrypoint, so it adds
+// no blocks, items or gameplay; it exists so the asset pack and metadata can be tried
+// in a real Fabric install. Build with: ./gradlew previewModJar
+tasks.register('previewModJar', Jar) {
+    group = 'build'
+    description = 'Builds a non-gameplay preview Fabric jar (engine + assets).'
+    dependsOn ':engine-core:classes'
+    archiveFileName = "playtime-engine-${project.mod_version}-preview+${project.minecraft_version}.jar"
+    destinationDirectory = layout.buildDirectory.dir('libs')
+    from(project(':engine-core').layout.buildDirectory.dir('classes/java/main'))
+    from(project(':engine-core').layout.buildDirectory.dir('resources/main'))
+    from('fabric/src/main/resources') {
+        filesMatching('fabric.mod.json') {
+            expand 'version': "${project.mod_version}-preview"
+            filter { line -> line.replace('"description": "', '"description": "PREVIEW: assets and engine only, no gameplay yet. ') }
+        }
+    }
+    dependsOn ':engine-core:processResources'
+    inputs.property 'previewLabel', 'PREVIEW: assets and engine only, no gameplay yet.'
+}
