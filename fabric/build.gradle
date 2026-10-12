@@ -60,3 +60,16 @@ java {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
 }
+
+// Client game tests: launch the real client (headless under Xvfb in CI), create a world,
+// and play through the main menu, hands, sample puzzle and chase. Run with
+//   xvfb-run -a ./gradlew :fabric:runClientGameTest
+fabricApi {
+    configureTests {
+        createSourceSet = true
+        modId = "playtime-test"
+        enableGameTests = false
+        enableClientGameTests = true
+        eula = true
+    }
+}

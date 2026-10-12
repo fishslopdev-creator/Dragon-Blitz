@@ -106,7 +106,7 @@ public class MainMenuScreen extends Screen {
         return true;
     }
 
-    private void press(String type) {
+    public void press(String type) {
         if (System.currentTimeMillis() - openedAt < 300) return;
         Minecraft mc = Minecraft.getInstance();
         switch (type) {

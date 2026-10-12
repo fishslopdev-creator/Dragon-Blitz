@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "playtime-test",
+  "version": "1.0.0",
+  "name": "Playtime Engine tests",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-client-gametest": ["dev.playtime.fabric.test.PlaytimeClientGameTest"]
+  },
+  "depends": {
+    "playtime": "*"
+  }
+}
